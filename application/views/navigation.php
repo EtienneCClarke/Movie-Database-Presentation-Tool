@@ -9,8 +9,21 @@
             <path d="M66.7928 49.2414V51.8958V54.5502V57.2046L83.7078 69.1493V54.5502V51.8958V37.3035L66.7928 49.2414Z" fill="white"/>
         </svg>
 
-        <a>
+        <a href="#">Home</a>
 
+        <a href="#">Browse</a>
+
+        <div id="search-container">
+            <span>
+                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="3.27111" transform="matrix(0.575685 0.817672 -0.822915 0.568165 8.36278 7.80242)" stroke="white" stroke-width="3"/>
+                    <line y1="-1.5" x2="9.10849" y2="-1.5" transform="matrix(0.575685 0.817672 -0.822915 0.568165 9.36166 11.2424)" stroke="white" stroke-width="3"/>
+                </svg>
+            </span>
+            <form id="search">
+                <input type="text" placeholder="Search..."/>
+            </form>
+        </div>
     </div>
 
 </header>
