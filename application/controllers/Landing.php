@@ -22,12 +22,14 @@ class Landing_controller extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Welcome_model');
 	}
+
 	public function index()
 	{
-		// To students: Please make sure you are using the data array to send across multiple variables to a single view.
-		$data['appName'] = $this->Welcome_model->getName();
-		$this->load->view('welcome', $data);
+		$this->load->view('Landing');
 	}
 }
+
+
+
+?>
