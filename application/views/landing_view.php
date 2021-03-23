@@ -1,10 +1,10 @@
 <html>
 
-    <head>
-    </head>
+    <?php include('head.php'); ?>
 
     <body>
-        <h1>Test</h1>
+        <!------- Navigation ------->
+        <?php include('navigation.php'); ?>
     </body>
 
 </html>
