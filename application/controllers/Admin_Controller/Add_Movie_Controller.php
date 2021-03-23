@@ -93,7 +93,7 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['genre'] = $this->add_movie_model->getGenre(); 
 			$data['actor'] = $this->add_movie_model->getActor(); 
 			$data['director'] = $this->add_movie_model->getDirector(); 
-			$data['year'] = $this->add_movie_model->getYearReleased(); 
+			$data['year'] = $this->add_movie_model->getYearReleased();  
 			$data['movie'] = $this->add_movie_model->getMovie(); 
 			$this->load->view('admin_view/add_movie', $data);
 	}
