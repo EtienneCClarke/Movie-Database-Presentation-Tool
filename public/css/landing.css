@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 #hero {
     width: 100%;
     height: calc(100% - 100px);
@@ -51,9 +53,15 @@
 #hero-filler-svgs {
     position: absolute;
     padding-top: 10px;
-    bottom: 0;
+    bottom: 0px;
     width: 90%;
     display: flex;
+}
+
+#hero-cloud {
+    position: absolute;
+    top: 22%;
+    left: 52%;
 }
 
 .hero-svg {
@@ -80,14 +88,47 @@
     transform: translateX(-50%);
     text-align: center;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: float;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
 }
 
-#explore p {
+#explore a {
     margin: 0;
+    text-decoration: none;
     font-weight: bolder;
-    font-size: 24;
+    line-height: 36px;
+    font-size: 18;
 }
 
 #popular {
     height: 100%;
+}
+
+
+
+
+/* Animations */
+@keyframes float {
+    
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    7.5% {
+        transform: translate(-50%, -20px);
+    }
+
+    15% { 
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
 }
