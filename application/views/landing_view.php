@@ -46,4 +46,7 @@
 
     </body>
 
+    <!------- SCRIPTS ------->
+    <script src="<?php echo base_url();?>public/js/interact.js"></script>
+
 </html>

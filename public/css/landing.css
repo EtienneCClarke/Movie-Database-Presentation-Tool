@@ -50,6 +50,7 @@
 
 #hero-filler-svgs {
     position: absolute;
+    padding-top: 10px;
     bottom: 0;
     width: 90%;
     display: flex;
@@ -78,6 +79,7 @@
     bottom: 10px;
     transform: translateX(-50%);
     text-align: center;
+    cursor: pointer;
 }
 
 #explore p {
