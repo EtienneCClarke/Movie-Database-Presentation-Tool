@@ -6,6 +6,7 @@
 
 // Initialise Variables
 var explore = document.getElementById('explore');
+var exploreSVG = explore.getElementsByTagName('svg');
 var popular = document.getElementById('popular');
 var hero_filler_svg = document.getElementById('hero-filler-svgs');
 
@@ -16,6 +17,6 @@ explore.onclick = function() {
     hero_filler_svg.scrollIntoView({behavior: 'smooth'});
 
     // Stop explore button floating
-    explore.style.animationIterationCount = "1";
+    exploreSVG[0].style.animationIterationCount = "1";
 
 }

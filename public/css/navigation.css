@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #fcfcfc;
+    background-color: #F7F7F7;
 }
 
 html::-webkit-scrollbar {
@@ -22,7 +22,7 @@ html::-webkit-scrollbar {
 }
 
 #navigation-content-container {
-    width: 85%;
+    width: 95%;
     display: flex;
     align-items: center;
 }

@@ -3,7 +3,7 @@
 #hero {
     width: 100%;
     height: calc(100% - 100px);
-    background: linear-gradient(180deg, #426DC4 0%, rgba(51, 139, 223, 0) 100%);
+    /* background: linear-gradient(180deg, #426DC4 0%, rgba(51, 139, 223, 0) 100%); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,29 +11,28 @@
 
 #hero-content-container {
     width: 70%;
-    display: inline-flex;
     justify-content: center;
-    margin-top: -10%;
+    margin-top: -5%;
 }
 
 #hero-content-container p {
     margin: 0;
+    margin-bottom: 50px;
     padding: 0;
     font-size: 54px;
-    line-height: 81px;
-    color: white;
+    line-height: 110%;
+    color: #1F232B;
     font-weight: bold;
     margin-top: auto;
 }
 
 #hero-content-container a {
-    margin-top: auto;
-    margin-right: 100px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 800;
     font-size: 24px;
     line-height: 36px;
-    border: 3px solid white;
+    border: 3px solid #1F232B;
+    color: #1F232B;
     border-radius: 30px;
     text-decoration: none;
     margin-bottom: 20px;
@@ -41,44 +40,9 @@
     transition: 0.2s;
 }
 
-#hero-content-container a:hover {
-    padding: 10px 20px;
-}
-
 #hero-content-container a:visited {
-    color: white;
+    color: #1F232B;
     text-decoration: none;
-}
-
-#hero-filler-svgs {
-    position: absolute;
-    padding-top: 10px;
-    bottom: 0px;
-    width: 90%;
-    display: flex;
-}
-
-#hero-cloud {
-    position: absolute;
-    top: 22%;
-    left: 52%;
-}
-
-.hero-svg {
-    margin-top: auto;
-}
-
-.hero-svg:nth-child(1) {
-    margin-left: 30px;
-}
-
-.hero-svg:nth-child(2) {
-    margin-left: 30%;
-}
-
-.hero-svg:nth-child(3) {
-    margin-left: auto;
-    margin-right: 15px;
 }
 
 #explore {
@@ -91,19 +55,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation-name: float;
-    animation-duration: 5s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: forward;
 }
 
 #explore a {
     margin: 0;
+    margin-bottom: 5px;
     text-decoration: none;
     font-weight: bolder;
     line-height: 36px;
     font-size: 18;
+}
+
+#explore svg {
+    animation-name: float;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 #popular {
@@ -111,24 +77,18 @@
 }
 
 
-
-
 /* Animations */
 @keyframes float {
     
     0% {
-        transform: translate(-50%, 0);
+        transform: translate(0, 0);
     }
 
-    7.5% {
-        transform: translate(-50%, -20px);
-    }
-
-    15% { 
-        transform: translate(-50%, 0);
+    50% {
+        transform: translate(0, -8px);
     }
 
     100% {
-        transform: translate(-50%, 0);
+        transform: translate(0, 0);
     }
 }
