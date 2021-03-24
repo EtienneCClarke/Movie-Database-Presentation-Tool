@@ -37,7 +37,11 @@
     text-decoration: none;
     margin-bottom: 20px;
     padding: 5px 15px;
-    transition: 0.2s;
+    transition: 0.35s;
+}
+
+#hero-content-container a:hover {
+    padding: 10px 30px;
 }
 
 #hero-content-container a:visited {
@@ -67,7 +71,7 @@
 }
 
 #explore svg {
-    animation-name: float;
+    animation-name: bounce;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
@@ -78,7 +82,7 @@
 
 
 /* Animations */
-@keyframes float {
+@keyframes bounce {
     
     0% {
         transform: translate(0, 0);
