@@ -9,9 +9,9 @@
             <path d="M66.7928 49.2414V51.8958V54.5502V57.2046L83.7078 69.1493V54.5502V51.8958V37.3035L66.7928 49.2414Z" fill="white"/>
         </svg>
 
-        <a href="<?php site_url('Landing');?>">Home</a>
+        <a href="<?php echo base_url('./index.php/');?>">Home</a>
 
-        <a href="<?php site_url('Browse');?>">Browse</a>
+        <a href="<?php echo base_url('./index.php/Browse');?>">Browse</a>
 
         <div id="search-container">
             <span>
