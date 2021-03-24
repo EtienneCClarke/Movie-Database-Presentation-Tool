@@ -41,12 +41,29 @@
             </div>
         </section>
 
+        <!------- Popular Carousel ------->
         <section id="popular">
+
+            <div class="carousel">
+
+                <div class="slide">
+                </div>
+
+                <div class="slide">
+                </div>
+
+                <div class="slide">
+                </div>
+
+            </div>
+
         </section>
 
     </body>
 
     <!------- SCRIPTS ------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>public/js/slick.min.js"></script>
     <script src="<?php echo base_url();?>public/js/interact.js"></script>
 
 </html>

@@ -1,3 +1,8 @@
+//-------------------------------------//
+// Pure javascript file which controls //
+// front end dynamic page interaction  //
+//-------------------------------------//
+
 
 // Initialise Variables
 var explore = document.getElementById('explore');
