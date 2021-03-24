@@ -12,7 +12,7 @@
         <!------- Call To Action ------->
         <section id="hero">
             <div id="hero-content-container">
-                <a href="#" id="call-to-action">SEARCH MOVIES</a>
+                <a href="<?php echo base_url('./index.php/Browse');?>" id="call-to-action">SEARCH MOVIES</a>
                 <p>The number 1 <br/>desitnation <br/>for all your movie needs!</p>
             </div>
             <div id="hero-filler-svgs">
