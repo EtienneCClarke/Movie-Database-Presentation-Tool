@@ -3,7 +3,7 @@
         <title>Add Movie</title>
         <h1>Add Movies to database</h1>
     </header>
-
+    
     <body>
 <!----------------------------------GENRE----------------------------------------->
         <h2>Genre</h2>
@@ -173,13 +173,13 @@ _END;
             <label> Description: </label><br>
 			<textarea rows="4" cols="50" name="description"></textarea><br>
             <label> Genre ID: </label>
-			<input type='number' name='genreID' max='10'required/><br>
+			<input type='number' name='genreID' required/><br>
             <label> Director ID: </label>
-			<input type='number' name='directorID' max='10'required/><br>
+			<input type='number' name='directorID' required/><br>
             <label> Actor ID: </label>
-			<input type='number' name='actorID' max='10'required/><br>
+			<input type='number' name='actorID' required/><br>
             <label> Release ID: </label>
-			<input type='number' name='releaseID' max='10'required/>
+			<input type='number' name='releaseID' required/>
             <input type='submit' value='Add'>
         </form>
         <?php echo $movieMessage; ?>
