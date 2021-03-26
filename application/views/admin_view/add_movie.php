@@ -181,6 +181,20 @@ _END;
             <label> Release ID: </label>
 			<input type='number' name='releaseID' required/>
             <input type='submit' value='Add'>
+
+            <?php
+        if(is_array($genre) || is_object($genre))
+        {
+            foreach($genre as $row)
+            {
+            echo <<<_END
+                    <select name='genreID'>
+                        <option value='$row->id'>$row->genre</option
+                    </select>
+_END;
+            }
+        }
+        ?>
         </form>
         <?php echo $movieMessage; ?>
     </body>
