@@ -3,6 +3,13 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Add_Movie_Controller extends CI_Controller {
 
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/admin
+	 */
+
 	public function __construct()
 	{
 		parent::__construct();
