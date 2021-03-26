@@ -172,30 +172,60 @@ _END;
 			<input type='text' name='duration' placeholder='HH:MM:SS' maxlength='255'required/><br>
             <label> Description: </label><br>
 			<textarea rows="4" cols="50" name="description"></textarea><br>
-            <label> Genre ID: </label>
-			<input type='number' name='genreID' required/><br>
-            <label> Director ID: </label>
-			<input type='number' name='directorID' required/><br>
-            <label> Actor ID: </label>
-			<input type='number' name='actorID' required/><br>
-            <label> Release ID: </label>
-			<input type='number' name='releaseID' required/>
-            <input type='submit' value='Add'>
 
-            <?php
-        if(is_array($genre) || is_object($genre))
-        {
-            foreach($genre as $row)
-            {
-            echo <<<_END
-                    <select name='genreID'>
-                        <option value='$row->id'>$row->genre</option
-                    </select>
-_END;
-            }
-        }
-        ?>
+            <label> Genre: </label>
+                <select name='genreID'>
+                    <?php
+                        if(is_array($genre) || is_object($genre))
+                        {
+                            foreach($genre as $row)
+                            {
+                                echo "<option value='$row->genreID'>$row->genre</option>";
+                            }
+                        }
+                    ?>
+                </select><br>
+
+            <label> Director: </label>
+                <select name='directorID'>
+			        <?php
+                    if(is_array($director) || is_object($director))
+                    {
+                        foreach($director as $row)
+                        {
+                            echo "<option value='$row->directorID'>$row->firstname $row->lastname</option>";
+                        }
+                    }
+                    ?>
+                </select><br>
+                
+            <label> Actor: </label>
+                <select name='actorID'>
+			        <?php
+                    if(is_array($actor) || is_object($actor))
+                    {
+                        foreach($actor as $row)
+                        {
+                            echo "<option value='$row->actorID'>$row->firstname $row->lastname</option>";
+                        }
+                    }
+                    ?>
+                </select><br>
+
+            <label> Release: </label>
+                <select name='releaseID'>
+			        <?php
+                    if(is_array($year) || is_object($year))
+                    {
+                        foreach($year as $row)
+                        {
+                            echo "<option value='$row->releasedID'>$row->year</option>";
+                        }
+                    }
+                    ?>
+                </select><br>
+            <input type='submit' value='Add'>
         </form>
-        <?php echo $movieMessage; ?>
+      <?php echo $movieMessage; ?>
     </body>
 </html>
