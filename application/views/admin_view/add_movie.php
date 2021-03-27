@@ -1,5 +1,6 @@
 <!DOCTYPE html>
     <header>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/navigation.css"/>
         <title>Add Movie</title>
         <h1>Add Movies to database</h1>
     </header>
