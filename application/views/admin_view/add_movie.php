@@ -183,6 +183,7 @@ _END;
 
             <label> Genre: </label>
                 <select name='genreID'>
+                <option value='Select'>Select</option>
                     <?php
                         if(is_array($genre) || is_object($genre))
                         {
@@ -196,6 +197,7 @@ _END;
 
             <label> Director: </label>
                 <select name='directorID'>
+                <option value='Select'>Select</option>
 			        <?php
                     if(is_array($director) || is_object($director))
                     {
@@ -209,6 +211,7 @@ _END;
                 
             <label> Actor: </label>
                 <select name='actorID'>
+                <option value='Select'>Select</option>
 			        <?php
                     if(is_array($actor) || is_object($actor))
                     {
@@ -222,6 +225,7 @@ _END;
 
             <label> Release: </label>
                 <select name='releaseID'>
+                <option value='Select'>Select</option>
 			        <?php
                     if(is_array($year) || is_object($year))
                     {
