@@ -22,7 +22,7 @@ class Login_Movie_Controller extends CI_Controller {
     $username = $this->input->post('username', TRUE);
     $password = $this->input->post('password', TRUE);
     if ($username === 'AdminJSMP' && $password === 'Apple20'){
-      redirect('add_movie');
+      redirect('admin');
     }else{
       redirect('login_movie');
     }
