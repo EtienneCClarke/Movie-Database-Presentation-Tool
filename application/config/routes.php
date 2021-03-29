@@ -62,5 +62,7 @@ $route['deleteActor/(:num)'] = 'Admin_Controller/Delete_Row_Controller/deleteAct
 $route['deleteDirector/(:num)'] = 'Admin_Controller/Delete_Row_Controller/deleteDirector/$1';
 $route['deleteYear/(:num)'] = 'Admin_Controller/Delete_Row_Controller/deleteYear/$1';
 $route['deleteMovie/(:num)'] = 'Admin_Controller/Delete_Row_Controller/deleteMovie/$1';
+$route['login_movie'] = 'Admin_Controller/Login_Movie_Controller';
+$route['get_login'] = 'Admin_Controller/Login_Movie_Controller/get_login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
