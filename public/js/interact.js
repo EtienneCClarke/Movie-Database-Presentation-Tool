@@ -7,13 +7,14 @@
 // Initialise Variables
 var explore = document.getElementById('explore');
 var exploreSVG = explore.getElementsByTagName('svg');
+var scrollTarget = document.getElementById('landing-bottom-arc');
 var popular = document.getElementById('popular');
 
 // When explore is clicked scroll popular section into view
 explore.onclick = function() {
 
     // Scroll to explore
-    popular.scrollIntoView({behavior: 'smooth'});
+    scrollTarget.scrollIntoView({behavior: 'smooth'});
 
     // Stop explore button floating
     exploreSVG[0].style.animationIterationCount = "1";

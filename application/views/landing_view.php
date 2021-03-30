@@ -40,6 +40,11 @@
 
         </section>
 
+        <svg viewBox="0 0 1920 82" fill="none" xmlns="http://www.w3.org/2000/svg" id="landing-bottom-arc">
+            <path d="M1920 0C1098.54 144.989 297.725 60.4121 0 0V81.5H1920V0Z" fill="#EEEEEE"/>
+        </svg>
+
+
         <!------- Popular Carousel ------->
         <section id="popular">
 

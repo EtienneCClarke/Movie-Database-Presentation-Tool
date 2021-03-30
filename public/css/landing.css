@@ -86,10 +86,13 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: -1;
 }
 
 #popular {
     height: 100%;
+    background: #EEEEEE;
+    margin-top: -1px;
 }
 
 .push {
