@@ -17,6 +17,6 @@ explore.onclick = function() {
     scrollTarget.scrollIntoView({behavior: 'smooth'});
 
     // Stop explore button floating
-    exploreSVG[0].style.animationIterationCount = "1";
+    // exploreSVG[0].style.animationIterationCount = "1";
 
 }

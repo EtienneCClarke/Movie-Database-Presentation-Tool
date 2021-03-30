@@ -57,7 +57,7 @@
 #explore {
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 15px;
     transform: translateX(-50%);
     text-align: center;
     cursor: pointer;
@@ -70,9 +70,8 @@
     margin: 0;
     margin-bottom: 5px;
     text-decoration: none;
-    font-weight: bolder;
-    line-height: 36px;
-    font-size: 18;
+    font-weight: bold;
+    font-size: 22;
 }
 
 #explore svg {
@@ -83,7 +82,7 @@
 
 #landing-bottom-arc {
     position: absolute;
-    bottom: 0;
+    bottom: 10;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -92,7 +91,8 @@
 #popular {
     height: 100%;
     background: #EEEEEE;
-    margin-top: -1px;
+    margin-top: -11px;
+    padding-top: 11px;
 }
 
 .push {
