@@ -2,6 +2,7 @@
 
     <head>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/navigation.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/slick.css"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/landing.css"/>
     </head>
 
@@ -46,28 +47,51 @@
 
 
         <!------- Popular Carousel ------->
-        <section id="popular">
+        <section id="carousels">
 
-            <div class="carousel">
+                <div class="carousel-container">
 
-                <div class="slide">
+                    <div>
+
+                        <div class="carousel">
+
+                            <div class="slide">
+                            </div>
+
+                            <div class="slide">
+                            </div>
+
+                            <div class="slide">
+                            </div>
+
+                            <div class="slide">
+                            </div>
+                            
+                            <div class="slide">
+                            </div>
+                            
+                            <div class="slide">
+                            </div>
+                            
+                            <div class="slide">
+                            </div>
+                            
+                            <div class="slide">
+                            </div>
+                        </div>
+
+                    </div>
+                
                 </div>
-
-                <div class="slide">
-                </div>
-
-                <div class="slide">
-                </div>
-
-            </div>
 
         </section>
 
     </body>
 
     <!------- SCRIPTS ------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>public/js/jquery-1.12.4.min.js"></script>
     <script src="<?php echo base_url();?>public/js/slick.min.js"></script>
+    <script src="<?php echo base_url();?>public/js/carousel.js"></script>
     <script src="<?php echo base_url();?>public/js/interact.js"></script>
 
 </html>
