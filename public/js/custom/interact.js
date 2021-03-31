@@ -7,8 +7,7 @@
 // Initialise Variables
 var explore = document.getElementById('explore');
 var exploreSVG = explore.getElementsByTagName('svg');
-var scrollTarget = document.getElementById('landing-bottom-arc');
-var popular = document.getElementById('popular');
+var scrollTarget = document.getElementById('carousels');
 
 // When explore is clicked scroll popular section into view
 explore.onclick = function() {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:regular,bold');
+@import url('https://fonts.googleapis.com/css?family=Poppins:regular,bold,extrabold');
 
 #hero {
     width: 100%;
@@ -93,25 +93,25 @@
 }
 
 #carousels {
-    height: 100%;
     background: #EEEEEE;
     margin-top: -11px;
-    padding-top: 11px;
+    padding-top: 1px;
+    padding-bottom: 30px;
 }
 
 .carousel-container {
     padding: 30px 0;
+    margin: 50px 0 100px 25%;
+    width: 500px;
 }
 
-
-
-.slide {
-    width: 300px;
-    height: 375px;
-    background: white;
-    box-shadow: 4px 8px 20px -7px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    margin: 0 15px 0 15px;
+.carousel-container h2 {
+    font-size: 30;
+    font-weight: extrabold;
+    color: #1F232B;
+    line-height: 110%;
+    margin-left: -10px;
+    margin-bottom: 40px;
 }
 
 /* Animations */

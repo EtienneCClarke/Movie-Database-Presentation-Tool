@@ -9,6 +9,6 @@ jQuery(document).ready(function(){
       arrows: false,
       infinite: false,
       swipeToSlide: true,
-      centerMode: true,
+      variableWidth: true,
     });
  });

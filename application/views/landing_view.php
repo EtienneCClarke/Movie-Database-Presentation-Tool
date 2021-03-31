@@ -1,9 +1,10 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/navigation.css"/>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/slick.css"/>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/landing.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/libraries/slick.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/custom/navigation.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/custom/landing.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/custom/cards.css"/>
     </head>
 
     <body>
@@ -46,39 +47,61 @@
         </svg>
 
 
-        <!------- Popular Carousel ------->
+        <!------- Carousels (Most Popular and Recently Added)------->
         <section id="carousels">
 
                 <div class="carousel-container">
 
-                    <div>
+                    <h2>Most Popular</h2>
 
-                        <div class="carousel">
+                    <br/>
 
-                            <div class="slide">
+                    <div class="carousel">
+
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+
+                        <div class="card">
+
+                            <div class="card-image">
+                                <!-- <img src="" width='100%' height='100%'/> -->
                             </div>
 
-                            <div class="slide">
-                            </div>
+                            <div class="card-content">
 
-                            <div class="slide">
-                            </div>
+                                <div class="card-runtime">
+                                </div>
 
-                            <div class="slide">
-                            </div>
-                            
-                            <div class="slide">
-                            </div>
-                            
-                            <div class="slide">
-                            </div>
-                            
-                            <div class="slide">
-                            </div>
-                            
-                            <div class="slide">
                             </div>
                         </div>
+
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+
+
+                    </div>
+                
+                </div>
+
+                <div class="carousel-container">
+
+                    <h2>Recently Added</h2>
+
+                    <br/>
+
+                    <div class="carousel">
+
+                        <?php 
+                        
+                            for($i = 0; $i < 12; $i++) {
+                                echo '<div class="card"></div>';
+                            }
+                        
+                        ?>
 
                     </div>
                 
@@ -89,9 +112,9 @@
     </body>
 
     <!------- SCRIPTS ------->
-    <script src="<?php echo base_url();?>public/js/jquery-1.12.4.min.js"></script>
-    <script src="<?php echo base_url();?>public/js/slick.min.js"></script>
-    <script src="<?php echo base_url();?>public/js/carousel.js"></script>
-    <script src="<?php echo base_url();?>public/js/interact.js"></script>
+    <script src="<?php echo base_url();?>public/js/libraries/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo base_url();?>public/js/libraries/slick.min.js"></script>
+    <script src="<?php echo base_url();?>public/js/custom/carousel.js"></script>
+    <script src="<?php echo base_url();?>public/js/custom/interact.js"></script>
 
 </html>
