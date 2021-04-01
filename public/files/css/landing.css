@@ -124,10 +124,11 @@
 
 #landing-search-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
     border-bottom: 7px solid black;
     width: 40%;
     margin-top: -150px;
+    padding: 20px 0 0 0;
 }
 
 .landing-search {
@@ -138,7 +139,7 @@
     font-size: 40;
     line-height: 100%;
     height: 50px;
-    width: 400px;
+    width: 100%;
     color: black;
     font-weight: bold;
     background: unset;

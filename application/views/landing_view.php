@@ -152,15 +152,13 @@
                 </form>
 
                 <span class="push">
-                    <svg height="50" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg height="45" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle r="3.27111" transform="matrix(0.575685 0.817672 -0.822915 0.568165 8.36278 7.80242)" stroke="#E83338" stroke-width="3"/>
                         <line y1="-1.5" x2="9.10849" y2="-1.5" transform="matrix(0.575685 0.817672 -0.822915 0.568165 9.36166 11.2424)" stroke="#E83338" stroke-width="3"/>
                     </svg>
                 </span>
-
+                
             </div>     
-
-        </div>
 
         </section>
 
