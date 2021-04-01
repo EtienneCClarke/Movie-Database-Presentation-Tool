@@ -1,10 +1,10 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/libraries/slick.css"/>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/custom/navigation.css"/>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/custom/landing.css"/>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/custom/cards.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/libraries/css/slick.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/navigation.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/landing.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/cards.css"/>
     </head>
 
     <body>
@@ -58,30 +58,45 @@
 
                     <div class="carousel">
 
-                        <div class="card"></div>
-                        <div class="card"></div>
-                        <div class="card"></div>
-                        <div class="card"></div>
+                        <?php 
+                        
+                            for($i = 0; $i < 12; $i++) {
 
-                        <div class="card">
+                                echo '
+                                    <div class="card">
 
-                            <div class="card-image">
-                                <!-- <img src="" width='100%' height='100%'/> -->
-                            </div>
+                                        <div class="card-image">
+                                            <!-- <img src="" width="100%" height="100%"/> -->
+                                        </div>
 
-                            <div class="card-content">
+                                        <div class="card-content">
 
-                                <div class="card-runtime">
-                                </div>
+                                            <div class="card-runtime">
+                                                <p>120min</p>
+                                            </div>
 
-                            </div>
-                        </div>
+                                            <div class="card-info-container">
 
-                        <div class="card"></div>
-                        <div class="card"></div>
-                        <div class="card"></div>
-                        <div class="card"></div>
+                                                <div class="card-info">
+                                                    <a href="http://www.google.com">The Batman</a>
+                                                    <span class="card-date">25th Feb 2020</span>
+                                                    <span class="card-budget">Budget: $107,000,000</span>
+                                                </div>
 
+                                                <div class="card-rating push">
+                                                    <h3>9.1</h3>
+                                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 0L11.0206 5.87336L17.5595 5.87336L12.2694 9.50329L14.2901 15.3766L9 11.7467L3.70993 15.3766L5.73056 9.50329L0.440492 5.87336L6.97937 5.87336L9 0Z" fill="#E83338"/>
+                                                    </svg>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>';
+
+                            }
+                        
+                        ?>
 
                     </div>
                 
@@ -96,9 +111,41 @@
                     <div class="carousel">
 
                         <?php 
-                        
+                            
                             for($i = 0; $i < 12; $i++) {
-                                echo '<div class="card"></div>';
+
+                                echo '
+                                    <div class="card">
+
+                                        <div class="card-image">
+                                            <!-- <img src="" width="100%" height="100%"/> -->
+                                        </div>
+
+                                        <div class="card-content">
+
+                                            <div class="card-runtime">
+                                                <p>120min</p>
+                                            </div>
+
+                                            <div class="card-info-container">
+
+                                                <div class="card-info">
+                                                    <a href="http://www.google.com">The Batman</a>
+                                                    <span class="card-date">25th Feb 2020</span>
+                                                    <span class="card-budget">Budget: $107,000,000</span>
+                                                </div>
+
+                                                <div class="card-rating push">
+                                                    <h3>9.1</h3>
+                                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 0L11.0206 5.87336L17.5595 5.87336L12.2694 9.50329L14.2901 15.3766L9 11.7467L3.70993 15.3766L5.73056 9.50329L0.440492 5.87336L6.97937 5.87336L9 0Z" fill="#E83338"/>
+                                                    </svg>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>';
+
                             }
                         
                         ?>
@@ -112,9 +159,9 @@
     </body>
 
     <!------- SCRIPTS ------->
-    <script src="<?php echo base_url();?>public/js/libraries/jquery-1.12.4.min.js"></script>
-    <script src="<?php echo base_url();?>public/js/libraries/slick.min.js"></script>
-    <script src="<?php echo base_url();?>public/js/custom/carousel.js"></script>
-    <script src="<?php echo base_url();?>public/js/custom/interact.js"></script>
+    <script src="<?php echo base_url();?>public/libraries/js/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo base_url();?>public/libraries/js/slick.min.js"></script>
+    <script src="<?php echo base_url();?>public/files/js/carousel.js"></script>
+    <script src="<?php echo base_url();?>public/files/js/interact.js"></script>
 
 </html>
