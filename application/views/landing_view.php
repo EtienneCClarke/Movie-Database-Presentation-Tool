@@ -47,7 +47,7 @@
         </svg>
 
 
-        <!------- Carousels (Most Popular and Recently Added)------->
+        <!------- Carousels (Most Popular and Recently Added) ------->
         <section id="carousels">
 
             <div class="carousel-container">
@@ -143,6 +143,7 @@
 
         </section>
 
+        <!------- Landing Searchbar ------->
         <section id="landing-search">
             
             <div id="landing-search-container">
