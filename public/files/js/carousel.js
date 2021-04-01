@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
       draggable: true,
       touchMove: true,
       arrows: false,
-      infinite: false,
+      infinite: true,
       swipeToSlide: true,
       variableWidth: true,
     });

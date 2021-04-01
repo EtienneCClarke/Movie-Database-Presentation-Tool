@@ -1,7 +1,7 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/navigation.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/navigation.css"/>
     </head>
 
     <body>
