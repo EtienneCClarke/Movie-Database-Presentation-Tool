@@ -175,15 +175,33 @@ _END;
             <label> Budget: </label>
 			<input type='decimal' name='budget' max='20'required/><br>
             <label> Revenue: </label>
-			<input type='decimal' name='revenue' maxlength='20'required/><br>
+			<input type='decimal' name='revenue' required/><br>
             <label> Duration: </label>
-			<input type='text' name='duration' placeholder='HH:MM:SS' maxlength='255'required/><br>
+			<input type='text' name='duration' placeholder='HH:MM' required/><br>
+            <label> Rating: </label>
+			<input type='number' step='0.1' name='rating' placeholder='9.9' max='10' required/><br>
             <label> Description: </label><br>
-			<textarea rows="4" cols="50" name="description"></textarea><br>
+			<textarea rows="4" cols="50" name="description" maxlength='1000'></textarea><br>
+            <label> Hyperlink: </label>
+			<input type='text' name='hyperlink' maxlength='255' required/><br>
 
-            <label> Genre: </label>
-                <select name='genreID'>
-                <option value='Select'>Select</option>
+            <label> Genre #1: </label>
+                <select name='genreIDOne'>
+                <option value='Select' required>Select</option>
+                    <?php
+                        if(is_array($genre) || is_object($genre))
+                        {
+                            foreach($genre as $row)
+                            {
+                                echo "<option value='$row->genreID'>$row->genre</option>";
+                            }
+                        }
+                    ?>
+                </select><br>
+
+                <label> Genre #2: </label>
+                <select name='genreIDTwo'>
+                <option value='Select' required>Select</option>
                     <?php
                         if(is_array($genre) || is_object($genre))
                         {
@@ -197,7 +215,7 @@ _END;
 
             <label> Director: </label>
                 <select name='directorID'>
-                <option value='Select'>Select</option>
+                <option value='Select' required>Select</option>
 			        <?php
                     if(is_array($director) || is_object($director))
                     {
@@ -211,7 +229,7 @@ _END;
                 
             <label> Actor: </label>
                 <select name='actorID'>
-                <option value='Select'>Select</option>
+                <option value='Select' required>Select</option>
 			        <?php
                     if(is_array($actor) || is_object($actor))
                     {
@@ -225,7 +243,7 @@ _END;
 
             <label> Release: </label>
                 <select name='releaseID'>
-                <option value='Select'>Select</option>
+                <option value='Select' required>Select</option>
 			        <?php
                     if(is_array($year) || is_object($year))
                     {
