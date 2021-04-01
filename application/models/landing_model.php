@@ -9,7 +9,7 @@ class landing_model extends CI_Model{
     // get all movies above rating of 8
     public function popular_movies()
     {
-        $query = $this->db->query("SELECT title, year, budget, rating, hyperlink, 
+        $query = $this->db->query("SELECT title, year, budget, rating, hyperlink, image, 
                                     EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) as duration FROM movie 
                                     INNER JOIN released USING(releasedID)
                                     WHERE rating > 8"); 
