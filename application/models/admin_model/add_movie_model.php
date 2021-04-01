@@ -109,7 +109,7 @@ class add_movie_model extends CI_Model{
         $duration = $data['duration'];
         $rating = $data['rating'];
         $genreID = $data['genreID'];
-        $genreID1 = $data['genreID1'];
+        $genreID2 = $data['genreID2'];
         $directorID = $data['directorID'];
         $actorID = $data['actorID'];
         $releasedID = $data['releasedID']; 
@@ -127,13 +127,14 @@ class add_movie_model extends CI_Model{
             $data['duration'] = $duration;
             $data['rating'] = $rating;
             $data['genreID'] = $genreID; 
-            $data['genreID1'] = $genreID1; 
+            $data['genreID2'] = $genreID2; 
             $data['directorID'] = $directorID; 
             $data['actorID'] = $actorID; 
             $data['releasedID'] = $releasedID; 
             $data['description'] = $description;  
             $data['hyperlink'] = $hyperlink;
-            $this->db->insert('movie', $data);  
+
+            $this->db->insert('movie', $data); // add movie details to database
         }
     }
 }

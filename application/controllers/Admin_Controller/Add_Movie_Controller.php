@@ -136,8 +136,8 @@ class Add_Movie_Controller extends CI_Controller {
 		$data['revenue'] = $this->input->post('revenue', TRUE); 
 		$data['duration'] = $this->input->post('duration', TRUE); 
 		$data['rating'] = $this->input->post('rating', TRUE); 
-		$data['genreID'] = $this->input->post('genreIDOne', TRUE); 
-		$data['genreID1'] = $this->input->post('genreIDTwo', TRUE); 
+		$data['genreID'] = $this->input->post('genreID', TRUE); 
+		$data['genreID2'] = $this->input->post('genreIDTwo', TRUE); 
 		$data['directorID'] = $this->input->post('directorID', TRUE); 
 		$data['actorID'] = $this->input->post('actorID', TRUE); 
 		$data['releasedID'] = $this->input->post('releaseID', TRUE); 
@@ -147,7 +147,7 @@ class Add_Movie_Controller extends CI_Controller {
 		$titleExists = $this->add_movie_model->addMovie($data);
 		if($titleExists)
 		{
-			$data['movieMessage'] = "Title already exists";
+			$data['movieMessage'] = "Movie already exists";
         }else{
             $data['movieMessage'] = "Movie added";
         } 

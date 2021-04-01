@@ -138,11 +138,7 @@ _END;
                         <th> Budget </th>
                         <th> Revenue </th>
                         <th> Duration </th>
-                        <th> Description </th>
-                        <th> Genre ID </th>
-                        <th> Director ID </th>
-                        <th> Actor ID </th>
-                        <th> Released ID </th>
+                        <th> Rating </th>
                         <th> Delete </th>
                     </tr>
         <?php
@@ -157,11 +153,7 @@ _END;
                         <td> $row->budget </td>
                         <td> $row->revenue </td>
                         <td> $row->duration </td>
-                        <td> $row->description </td>
-                        <td> $row->genreID </td>
-                        <td> $row->directorID </td>
-                        <td> $row->actorID </td>
-                        <td> $row->releasedID </td>
+                        <td> $row->rating </td>
                         <td><a href=$deleteMovie> Delete </a></td>
                     </tr>
 _END;
@@ -179,14 +171,14 @@ _END;
             <label> Duration: </label>
 			<input type='text' name='duration' placeholder='HH:MM' required/><br>
             <label> Rating: </label>
-			<input type='number' step='0.1' name='rating' placeholder='9.9' max='10' required/><br>
+			<input type='number' step='0.1' name='rating' placeholder='9.9' min='0.1' max='10' required/><br>
             <label> Description: </label><br>
 			<textarea rows="4" cols="50" name="description" maxlength='1000'></textarea><br>
             <label> Hyperlink: </label>
 			<input type='text' name='hyperlink' maxlength='255' required/><br>
 
             <label> Genre #1: </label>
-                <select name='genreIDOne'>
+                <select name='genreID'>
                 <option value='Select' required>Select</option>
                     <?php
                         if(is_array($genre) || is_object($genre))
