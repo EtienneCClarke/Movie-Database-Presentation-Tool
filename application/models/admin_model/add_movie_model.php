@@ -11,7 +11,7 @@ class add_movie_model extends CI_Model{
     */
     public function getGenre()
     {
-        $query = $this->db->query("SELECT * FROM genre"); 
+        $query = $this->db->query("SELECT * FROM genre ORDER BY genre ASC"); 
         return $query->result(); 
     }
 
@@ -20,7 +20,7 @@ class add_movie_model extends CI_Model{
     */
     public function getActor()
     {
-        $query = $this->db->query("SELECT * FROM actor"); 
+        $query = $this->db->query("SELECT * FROM actor ORDER BY firstname ASC"); 
         return $query->result(); 
     }
 
@@ -29,7 +29,7 @@ class add_movie_model extends CI_Model{
     */
     public function getDirector()
     {
-        $query = $this->db->query("SELECT * FROM director"); 
+        $query = $this->db->query("SELECT * FROM director ORDER BY firstname ASC"); 
         return $query->result(); 
     }
 
@@ -38,7 +38,7 @@ class add_movie_model extends CI_Model{
     */
     public function getYearReleased()
     {
-        $query = $this->db->query("SELECT * FROM released"); 
+        $query = $this->db->query("SELECT * FROM released ORDER BY year ASC"); 
         return $query->result(); 
     }
 
@@ -47,7 +47,7 @@ class add_movie_model extends CI_Model{
     */
     public function getMovie()
     {
-        $query = $this->db->query("SELECT * FROM movie"); 
+        $query = $this->db->query("SELECT * FROM movie ORDER BY title ASC"); 
         return $query->result(); 
     }
 
