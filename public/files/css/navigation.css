@@ -53,25 +53,29 @@ html::-webkit-scrollbar {
     border-bottom: 5px solid white;
 }
 
-#search {
+.search {
     display: inline;
 }
 
-#search input {
+.search input {
     font-size: 20;
     width: 400px;
     color: white;
+    font-weight: bold;
     background: unset;
     border: unset;
 }
 
 
-#search input:focus {
+.search input:focus {
     outline: none;
 }
 
-#search input::placeholder {
-    font-size: 100%;
+.search input:focus::placeholder {
+    color: transparent;
+}
+
+.search input::placeholder {
     font-size: 20;
     font-weight: bold;
     color: white;

@@ -50,109 +50,117 @@
         <!------- Carousels (Most Popular and Recently Added)------->
         <section id="carousels">
 
-                <div class="carousel-container">
+            <div class="carousel-container">
 
-                    <h2>Most Popular</h2>
+                <h2>Most Popular</h2>
 
-                    <br/>
+                <br/>
 
-                    <div class="carousel">
+                <div class="carousel">
 
-                        <?php 
-                        
-                            for($i = 0; $i < 12; $i++) {
+                    <?php 
 
-                                echo '
-                                    <div class="card">
+                        for($i = 0; $i < 12; $i++) {
 
-                                        <div class="card-image">
-                                            <!-- <img src="" width="100%" height="100%"/> -->
+                            echo <<<html
+                            <div class="card">
+                                <div class="card-image">
+                                    <!-- <img src="" width="100%" height="100%"/> -->
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-runtime">
+                                        <p>120min</p>
+                                    </div>
+                                    <div class="card-info-container">
+                                        <div class="card-info">
+                                            <a href="http://www.google.com">The Batman</a>
+                                            <span class="card-date">25th Feb 2020</span>
+                                            <span class="card-budget">Budget: $107,000,000</span>
                                         </div>
-
-                                        <div class="card-content">
-
-                                            <div class="card-runtime">
-                                                <p>120min</p>
-                                            </div>
-
-                                            <div class="card-info-container">
-
-                                                <div class="card-info">
-                                                    <a href="http://www.google.com">The Batman</a>
-                                                    <span class="card-date">25th Feb 2020</span>
-                                                    <span class="card-budget">Budget: $107,000,000</span>
-                                                </div>
-
-                                                <div class="card-rating push">
-                                                    <h3>9.1</h3>
-                                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9 0L11.0206 5.87336L17.5595 5.87336L12.2694 9.50329L14.2901 15.3766L9 11.7467L3.70993 15.3766L5.73056 9.50329L0.440492 5.87336L6.97937 5.87336L9 0Z" fill="#E83338"/>
-                                                    </svg>
-                                                </div>
-
-                                            </div>
+                                        <div class="card-rating push">
+                                            <h3>9.1</h3>
+                                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 0L11.0206 5.87336L17.5595 5.87336L12.2694 9.50329L14.2901 15.3766L9 11.7467L3.70993 15.3766L5.73056 9.50329L0.440492 5.87336L6.97937 5.87336L9 0Z" fill="#E83338"/>
+                                            </svg>
                                         </div>
-                                    </div>';
+                                    </div>
+                                </div>
+                            </div>
+                            html;
 
-                            }
+                        }   
                         
-                        ?>
+                    ?>
 
-                    </div>
-                
                 </div>
 
-                <div class="carousel-container">
+            </div>
 
-                    <h2>Recently Added</h2>
+            <div class="carousel-container">
 
-                    <br/>
+                <h2>Recently Added</h2>
 
-                    <div class="carousel">
+                <br/>
 
-                        <?php 
-                            
-                            for($i = 0; $i < 12; $i++) {
+                <div class="carousel">
 
-                                echo '
-                                    <div class="card">
-
-                                        <div class="card-image">
-                                            <!-- <img src="" width="100%" height="100%"/> -->
-                                        </div>
-
-                                        <div class="card-content">
-
-                                            <div class="card-runtime">
-                                                <p>120min</p>
-                                            </div>
-
-                                            <div class="card-info-container">
-
-                                                <div class="card-info">
-                                                    <a href="http://www.google.com">The Batman</a>
-                                                    <span class="card-date">25th Feb 2020</span>
-                                                    <span class="card-budget">Budget: $107,000,000</span>
-                                                </div>
-
-                                                <div class="card-rating push">
-                                                    <h3>9.1</h3>
-                                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9 0L11.0206 5.87336L17.5595 5.87336L12.2694 9.50329L14.2901 15.3766L9 11.7467L3.70993 15.3766L5.73056 9.50329L0.440492 5.87336L6.97937 5.87336L9 0Z" fill="#E83338"/>
-                                                    </svg>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>';
-
-                            }
+                    <?php 
                         
-                        ?>
+                        for($i = 0; $i < 12; $i++) {
 
-                    </div>
-                
+                            echo <<<html
+                            <div class="card">
+                                <div class="card-image">
+                                    <!-- <img src="" width="100%" height="100%"/> -->
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-runtime">
+                                        <p>120min</p>
+                                    </div>
+                                    <div class="card-info-container">
+                                        <div class="card-info">
+                                            <a href="http://www.google.com">The Batman</a>
+                                            <span class="card-date">25th Feb 2020</span>
+                                            <span class="card-budget">Budget: $107,000,000</span>
+                                        </div>
+                                        <div class="card-rating push">
+                                            <h3>9.1</h3>
+                                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 0L11.0206 5.87336L17.5595 5.87336L12.2694 9.50329L14.2901 15.3766L9 11.7467L3.70993 15.3766L5.73056 9.50329L0.440492 5.87336L6.97937 5.87336L9 0Z" fill="#E83338"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            html;
+                        }
+                    
+                    ?>
+
                 </div>
+                
+            </div>
+
+        </section>
+
+        <section id="landing-search">
+            
+            <div id="landing-search-container">
+                
+                <form id="search" class="landing-search">
+                    <input type="text" name="search" placeholder="Search..."/>
+                </form>
+
+                <span class="push">
+                    <svg height="50" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="3.27111" transform="matrix(0.575685 0.817672 -0.822915 0.568165 8.36278 7.80242)" stroke="#E83338" stroke-width="3"/>
+                        <line y1="-1.5" x2="9.10849" y2="-1.5" transform="matrix(0.575685 0.817672 -0.822915 0.568165 9.36166 11.2424)" stroke="#E83338" stroke-width="3"/>
+                    </svg>
+                </span>
+
+            </div>     
+
+        </div>
 
         </section>
 
