@@ -35,13 +35,13 @@
 
 .card-info {
     height: 80%;
-    margin-top: -10px;
+    margin-top: -7px;
 }
 
 .card-info a {
     color: white;
     padding-bottom: 0;
-    font-size: 24;
+    font-size: 20;
     font-weight: bold;
     text-decoration: none;
     transition: 0.05s;

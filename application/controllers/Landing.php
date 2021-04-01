@@ -34,6 +34,7 @@ class Landing extends CI_Controller {
 		$data['recently_added'] = $this->landing_model->recently_added(); 
 		$this->load->view('landing_view', $data);
 	}
+
 }
 
 

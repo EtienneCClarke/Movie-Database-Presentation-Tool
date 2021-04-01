@@ -65,6 +65,12 @@
                         {
                             foreach($popular_movies as $row)
                             { 
+
+                                $name = $row->title;
+                                if(strlen($name) > 20) {
+                                    $name = substr($name, 0, 13)."...";
+                                }
+
                             echo <<<html
                             <div class="card">
                                 <div class="card-image">
@@ -76,7 +82,7 @@
                                     </div>
                                     <div class="card-info-container">
                                         <div class="card-info">
-                                            <a href="$row->hyperlink">$row->title</a>
+                                            <a href="$row->hyperlink">$name</a>
                                             <span class="card-date">$row->year</span>
                                             <span class="card-budget">Budget: $$row->budget</span>
                                         </div>
@@ -114,6 +120,12 @@
                         {
                             foreach($recently_added as $row)
                             { 
+
+                                $name = $row->title;
+                                if(strlen($name) > 20) {
+                                    $name = substr($name, 0, 12)."...";
+                                }
+
                             echo <<<html
                             <div class="card">
                                 <div class="card-image">
@@ -125,7 +137,7 @@
                                     </div>
                                     <div class="card-info-container">
                                         <div class="card-info">
-                                            <a href="$row->hyperlink">$row->title</a>
+                                            <a href="$row->hyperlink">$name</a>
                                             <span class="card-date">$row->year</span>
                                             <span class="card-budget">Budget: $$row->budget</span>
                                         </div>
