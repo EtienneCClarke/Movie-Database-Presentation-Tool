@@ -22,11 +22,17 @@ class Landing extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url');
+		$this->load->helper('form'); 
+
+		$this->load->model('landing_model'); 
 	}
 
 	public function index()
 	{
-		$this->load->view('landing_view');
+		$data['popular_movies'] = $this->landing_model->popular_movies(); 
+		$data['recently_added'] = $this->landing_model->recently_added(); 
+		$this->load->view('landing_view', $data);
 	}
 }
 
