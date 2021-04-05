@@ -64,5 +64,6 @@ $route['deleteYear/(:num)'] = 'Admin_Controller/Delete_Row_Controller/deleteYear
 $route['deleteMovie/(:num)'] = 'Admin_Controller/Delete_Row_Controller/deleteMovie/$1';
 $route['login_movie'] = 'Admin_Controller/Login_Movie_Controller';
 $route['get_login'] = 'Admin_Controller/Login_Movie_Controller/get_login';
+$route['preview/(:num)'] = 'Preview/show_movie/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

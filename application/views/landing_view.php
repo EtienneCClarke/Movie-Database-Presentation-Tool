@@ -74,7 +74,7 @@
 
                             <div class="card">
                                 <div class="card-image">
-                                    <?php echo '<img src="data:image;base64,'.base64_encode($row->image).'" width="100%" height="100%"/>' ?>
+                                <?php echo '<img src="data:image;base64,'.base64_encode($row->image).'" width="100%" height="100%"/>'?>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-runtime">
@@ -82,7 +82,7 @@
                                     </div>
                                     <div class="card-info-container">
                                         <div class="card-info">
-                                            <a href="<?php echo $row->hyperlink ?>"><?php echo $name ?></a>
+                                            <a href="<?php echo base_url('./index.php/preview/'.$row->movieID); ?>"><?php echo $name ?></a>
                                             <span class="card-date"><?php echo $row->year ?></span>
                                             <span class="card-budget">Budget: $<?php echo $row->budget ?></span>
                                         </div>
