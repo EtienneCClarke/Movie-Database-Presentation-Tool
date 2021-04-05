@@ -6,6 +6,7 @@ class search_model extends CI_Model{
         $this->load->database(); 
     }
 
+    // search movies by searching movie title, actor and director
     public function search($input)
     {
         // scan movie titles //
