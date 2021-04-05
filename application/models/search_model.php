@@ -24,7 +24,7 @@ class search_model extends CI_Model{
             {
                 return $actor_query->result(); 
             }else{
-                // scan directors
+                // scan directors //
                 $director_query = $this->db->query("SELECT firstname, lastname FROM director
                                              WHERE firstname LIKE '%$input%'
                                              OR lastname LIKE '%$input%'"); 
