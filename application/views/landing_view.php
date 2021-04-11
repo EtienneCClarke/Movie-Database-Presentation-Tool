@@ -179,6 +179,9 @@
 
         </section>
 
+        <!------- Navigation ------->
+        <?php include('footer.php'); ?>
+
     </body>
 
     <!------- SCRIPTS ------->
