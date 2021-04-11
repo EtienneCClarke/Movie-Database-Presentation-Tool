@@ -135,7 +135,7 @@
                                     </div>
                                     <div class="card-info-container">
                                         <div class="card-info">
-                                            <a href="<?php echo $row->hyperlink ?>"><?php echo $row->title ?></a>
+                                            <a href="<?php echo $row->hyperlink ?>"><?php echo $name ?></a>
                                             <span class="card-date"><?php echo $row->year ?></span>
                                             <span class="card-budget">Budget: $<?php echo $row->budget ?></span>
                                         </div>
