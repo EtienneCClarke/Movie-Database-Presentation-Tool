@@ -5,7 +5,7 @@ class landing_model extends CI_Model{
     {
         $this->load->database(); 
     }
-
+  
     // get all movies above rating of 8
     public function popular_movies()
     {

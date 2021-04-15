@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/navigation.css"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/landing.css"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/cards.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/footer.css"/>
     </head>
 
     <body>

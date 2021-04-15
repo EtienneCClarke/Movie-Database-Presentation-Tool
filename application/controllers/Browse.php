@@ -13,12 +13,19 @@ class Browse extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url');
+
+		$this->load->model('browse_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('browse_view');
+
+		$data['movies'] = $this->browse_model->all_movies();
+
+		$this->load->view('browse_view', $data);
 	}
+
 }
 
 
