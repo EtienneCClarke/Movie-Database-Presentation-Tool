@@ -68,7 +68,7 @@
                             { 
 
                                 $name = $row->title;
-                                if(strlen($name) > 20) {
+                                if(strlen($name) > 16) {
                                     $name = substr($name, 0, 13)."...";
                                 }
                                 ?>
@@ -121,8 +121,8 @@
                             { 
 
                                 $name = $row->title;
-                                if(strlen($name) > 20) {
-                                    $name = substr($name, 0, 12)."...";
+                                if(strlen($name) > 16) {
+                                    $name = substr($name, 0, 13)."...";
                                 }
                                 ?>
 

@@ -1,0 +1,52 @@
+#all-movies {
+    background: #EEEEEE;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+
+#sorts {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    padding-top: 30px;
+    font-size: 18;
+    color: #1d1d1d;
+    font-weight: bold;
+    border-top: 5px solid #1F232B;
+}
+
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.1s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+label[for="order"] {
+    margin-left: 20px;
+}
+
+select {
+    margin-left: 10px;
+    color: #1D1D1D;
+    background: unset;
+    border: 3px solid #1D1D1D;
+    padding: 2px 3px;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+select:focus {
+    outline: none;
+}
