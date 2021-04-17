@@ -16,12 +16,14 @@ class Browse extends CI_Controller {
 		$this->load->helper('url');
 
 		$this->load->model('browse_model');
+		$this->load->model('admin_model/add_movie_model'); 
 	}
 
 	public function index()
 	{
 
 		$data['movies'] = $this->browse_model->all_movies();
+		$data['genre'] = $this->add_movie_model->getGenre(); 
 
 		$this->load->view('browse_view', $data);
 	}
