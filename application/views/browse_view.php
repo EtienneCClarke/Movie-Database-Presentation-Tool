@@ -96,9 +96,10 @@
         <!------- Movie Cards ------->
         <?php include('footer.php') ?>
         
-    </body>
+        <!------- SCRIPTS ------->
+        <script src="<?php echo base_url();?>public/libraries/js/jquery-1.12.4.min.js"></script>
+        <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
 
-    <!------- SCRIPTS ------->
-    <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
+    </body>
 
 </html>

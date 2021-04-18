@@ -6,13 +6,15 @@ function sort(type) {
             break;
         case "title":
             showOrder();
-            sortByTitle();
+            sortBy('card-title');
             break;
         case "rating":
             showOrder();
+            sortBy('card-rating')
             break;
         case "release":
             showOrder();
+            sortBy('card-date');
             break;
         case "budget":
             showOrder();
@@ -21,38 +23,18 @@ function sort(type) {
 
 }
 
-function sortByTitle() {
+function sortBy(type) {
 
-    var cards = document.getElementsByClassName('card');
+    var cardElements = document.getElementsByClassName('card');
 
-    console.log(cards[0].getElementsByClassName('card-title'));
-    console.log(cards[1].getElementsByClassName('card-title'));
+    var cards = [];
+    for(var i = 0; i < cardElements.length; i++) {
+        cards[i] = cardElements[i];
+    }
 
-    // for(var i = 0; i < cards.length; i++) {
+    var sortedCards = bubbleSort(cards, type);
 
-    //     var min = i;
-
-    //     for(var j = i+1; j < cards.length; j++) {
-
-    //         var cardTitleA = (cards[j].getElementsByClassName('card-title'))[0].textContent;
-    //         var cardTitleB = (cards[min].getElementsByClassName('card-title'))[0].textContent;
-            
-    //         if(cardTitleA.localeCompare(cardTitleB) < 0) {
-
-    //             var tmp = cards[i];
-    //             cards[i] = cards[min];
-    //             cards[min] = tmp;
-
-    //         }
-    //     }
-    // }
-
-    // var txt = "";
-    // for(var i = 0; i < cards.length; i++) {
-    //     txt = txt + cards[i].getElementsByClassName('card-title')[0].textContent + ",";
-    // }
-
-    // console.log(txt);
+    orderCardsInDom(sortedCards);
 
 }
 
@@ -64,4 +46,41 @@ function hideOrder() {
 function showOrder() {
     document.getElementById('order').style.display = "unset";
     document.getElementById('order-label').style.display = "unset";
+}
+
+function orderCardsInDom(array) {
+
+    for(var i = 0; i < array.length; i++) {
+        array[i].style.order = i.toString();
+    }
+
+}
+
+function bubbleSort(array, className) {
+
+    for(var i = 0; i < array.length; i++) {
+
+        var min = i;
+
+        for(var j = i+1; j < array.length; j++) {
+
+            var A = (array[j].getElementsByClassName(className))[0].textContent;
+            var B = (array[min].getElementsByClassName(className))[0].textContent;
+            
+            if(A.localeCompare(B) < 0) {
+
+                min = j;
+
+            }
+        }
+
+        if(min != i) {
+            var tmp = array[i];
+            array[i] = array[min];
+            array[min] = tmp;
+        }
+
+    }
+
+    return array;
 }
