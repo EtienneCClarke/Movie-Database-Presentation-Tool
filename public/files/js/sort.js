@@ -2,21 +2,21 @@ function sort(type) {
 
     switch(type) {
         case "unselected":
-            hideOrder();
+            location.reload();
             break;
-        case "title":
+        case "card-title":
             showOrder();
-            sortBy('card-title');
+            sortBy(type);
             break;
-        case "rating":
+        case "card-rating":
             showOrder();
-            sortBy('card-rating')
+            sortBy(type)
             break;
-        case "release":
+        case "card-date":
             showOrder();
-            sortBy('card-date');
+            sortBy(type);
             break;
-        case "budget":
+        case "card-budget":
             showOrder();
             break;
     }
@@ -32,7 +32,15 @@ function sortBy(type) {
         cards[i] = cardElements[i];
     }
 
+    if(type == 'null') {
+        type = document.getElementById('sort').value.toString();
+    }
+
     var sortedCards = bubbleSort(cards, type);
+
+    if(document.getElementById('order').value.toString() == 'desc') {
+        sortedCards.reverse();
+    }
 
     orderCardsInDom(sortedCards);
 
@@ -48,10 +56,10 @@ function showOrder() {
     document.getElementById('order-label').style.display = "unset";
 }
 
-function orderCardsInDom(array) {
+function orderCardsInDom(cards) {
 
-    for(var i = 0; i < array.length; i++) {
-        array[i].style.order = i.toString();
+    for(var i = 0; i < cards.length; i++) {
+        cards[i].style.order = i.toString();
     }
 
 }
@@ -66,7 +74,7 @@ function bubbleSort(array, className) {
 
             var A = (array[j].getElementsByClassName(className))[0].textContent;
             var B = (array[min].getElementsByClassName(className))[0].textContent;
-            
+
             if(A.localeCompare(B) < 0) {
 
                 min = j;

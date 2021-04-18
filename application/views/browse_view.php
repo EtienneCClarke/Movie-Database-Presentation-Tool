@@ -15,17 +15,17 @@
         <section id="sorts">
             <div>
                 <label for="sort">Sort By</label>
-                <select name="sort" id="sort" onchange="sort(this.options[this.selectedIndex].value)">
+                <select name="sort" id="sort" onchange="sort(this.options[this.selectedIndex].value);">
                     <option value="unselected">None</option>
-                    <option value="title">Title</option>
-                    <option value="rating">Rating</option>
-                    <option value="release">Release Date</option>
-                    <option value="budget">Budget</option>
+                    <option value="card-title">Title</option>
+                    <option value="card-rating">Rating</option>
+                    <option value="card-date">Release Date</option>
+                    <option value="card-budget">Budget</option>
                 </select>
                 <label for="order" id="order-label">In Order</label>
-                <select name="order" id="order">
-                    <option value="desc" selected>Desc</option>
-                    <option value="asc">Asc</option>
+                <select name="order" id="order" onchange="sortBy('null')">
+                    <option value="asc" selected>Ascending</option>
+                    <option value="desc">Descending</option>
                 </select>
             </div>
             <div class="push">
@@ -67,7 +67,7 @@
                         }
                         ?>
 
-                        <div class="card" id="<?php echo $index ?>">
+                        <div class="card">
                             <div class="card-image">
                             <?php echo '<img src="data:image;base64,'.base64_encode($row->image).'" width="100%" height="100%"/>'?>
                             </div>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </div>
-            <?php   $index++;   }   }   ?>
+            <?php   }   }   ?>
         </section>
         
         <!------- Movie Cards ------->
