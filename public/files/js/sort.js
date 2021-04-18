@@ -2,7 +2,8 @@ function sort(type) {
 
     switch(type) {
         case "unselected":
-            location.reload();
+            hideOrder();
+            removeSort();
             break;
         case "card-title":
             showOrder();
@@ -18,6 +19,7 @@ function sort(type) {
             break;
         case "card-budget":
             showOrder();
+            sortBy(type);
             break;
     }
 
@@ -43,6 +45,21 @@ function sortBy(type) {
     }
 
     orderCardsInDom(sortedCards);
+
+}
+
+function removeSort() {
+
+    var cardElements = document.getElementsByClassName('card');
+
+    var cards = [];
+    for(var i = 0; i < cardElements.length; i++) {
+        cards[i] = cardElements[i];
+    }
+
+    for(var i = 0; i < cards.length; i++) {
+        cards[i].style.order = 'unset';
+    }
 
 }
 
@@ -75,7 +92,12 @@ function bubbleSort(array, className) {
             var A = (array[j].getElementsByClassName(className))[0].textContent;
             var B = (array[min].getElementsByClassName(className))[0].textContent;
 
-            if(A.localeCompare(B) < 0) {
+            if(document.getElementById('sort').value.toString() == 'card-budget') {
+                A = parseFloat(A);
+                B = parseFloat(B);
+            }
+
+            if(A < B) {
 
                 min = j;
 

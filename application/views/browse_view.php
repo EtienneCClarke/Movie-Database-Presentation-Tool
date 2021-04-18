@@ -79,7 +79,7 @@
                                     <div class="card-info">
                                         <a class="card-title" href="<?php echo base_url('./index.php/preview/'.$row->movieID); ?>"><?php echo $name ?></a>
                                         <span class="card-date"><?php echo $row->year ?></span>
-                                        <span class="card-budget">Budget: $<?php echo $row->budget ?></span>
+                                        <div class="card-budget-container">Budget: $<span class="card-budget"><?php echo $row->budget ?></span></div>
                                     </div>
                                     <div class="card-rating push">
                                         <h3><?php echo $row->rating ?></h3>

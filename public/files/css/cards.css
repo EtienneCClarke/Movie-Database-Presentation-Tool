@@ -67,8 +67,13 @@
     margin-top: -4px;
 }
 
-.card-budget {
+.card-budget-container {
     margin-top: 5px;
+    font-size: 10;
+    font-weight: bold;
+    color: #CECECE;
+    display: flex;
+    flex-direction: row;
 }
 
 .card-rating {
