@@ -22,17 +22,53 @@ class filter_model extends CI_Model{
         $genre = $data['genre'];
         $order = $data['order'];
 
-        // query to filter movies
-        $query = $this->db->query("SELECT title, year, budget, rating, hyperlink, image, movieID, genre, revenue, 
-                                    EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) as duration FROM movie 
-                                    INNER JOIN released USING(releasedID)
-                                    INNER JOIN genre USING(genreID)
-                                    WHERE budget BETWEEN $budget_one AND $budget_two
-                                    AND year BETWEEN $year_one AND $year_two
-                                    AND revenue BETWEEN $revenue_one AND $revenue_two
-                                    AND EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) BETWEEN $runtime_one AND $runtime_two
-                                    AND genre='$genre'
-                                    ORDER BY $sort $order"); 
-        return $query->result(); 
+        // if user filtered by genre and sort
+        if($genre != "unselected" && $sort != "unselected")
+        {
+            // query to filter movies
+            $query = $this->db->query("SELECT title, year, budget, rating, hyperlink, image, movieID, genre, revenue, 
+                                        EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) as duration FROM movie 
+                                        INNER JOIN released USING(releasedID)
+                                        INNER JOIN genre USING(genreID)
+                                        WHERE budget BETWEEN $budget_one AND $budget_two
+                                        AND year BETWEEN $year_one AND $year_two
+                                        AND revenue BETWEEN $revenue_one AND $revenue_two
+                                        AND EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) BETWEEN $runtime_one AND $runtime_two
+                                        AND genre='$genre'
+                                        ORDER BY $sort $order"); 
+            return $query->result(); 
+        }
+
+        // if user only filtered by genre
+        if($genre != "unselected")
+        {
+            // query to filter movies
+            $query = $this->db->query("SELECT title, year, budget, rating, hyperlink, image, movieID, genre, revenue, 
+                                        EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) as duration FROM movie 
+                                        INNER JOIN released USING(releasedID)
+                                        INNER JOIN genre USING(genreID)
+                                        WHERE budget BETWEEN $budget_one AND $budget_two
+                                        AND year BETWEEN $year_one AND $year_two
+                                        AND revenue BETWEEN $revenue_one AND $revenue_two
+                                        AND EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) BETWEEN $runtime_one AND $runtime_two
+                                        AND genre='$genre'"); 
+            return $query->result(); 
+        }
+
+        // if user only fitlered by sort
+        if($sort != "unselected")
+        {
+            // query to filter movies
+            $query = $this->db->query("SELECT title, year, budget, rating, hyperlink, image, movieID, genre, revenue, 
+                                        EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) as duration FROM movie 
+                                        INNER JOIN released USING(releasedID)
+                                        INNER JOIN genre USING(genreID)
+                                        WHERE budget BETWEEN $budget_one AND $budget_two
+                                        AND year BETWEEN $year_one AND $year_two
+                                        AND revenue BETWEEN $revenue_one AND $revenue_two
+                                        AND EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) BETWEEN $runtime_one AND $runtime_two
+                                        ORDER BY $sort $order"); 
+            return $query->result(); 
+        }
     }
 }
