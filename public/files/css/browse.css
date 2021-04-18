@@ -9,6 +9,53 @@
     padding-bottom: 100px;
 }
 
+#filters {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#filters-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #1D1D1D;
+    font-size: 22;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 0.2s;
+    border-radius: 10px 10px 0 0;
+}
+
+#filters-toggle:hover {
+    background: #F4F4F4;
+    cursor: pointer;
+}
+
+#filters-toggle p {
+    margin: 0;
+    padding: 0;
+}
+
+#filters-toggle span, #filters-toggle p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#filters-toggle span {
+    font-size: 12;
+    color: #616161;
+}
+
+#filters-container {
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+}
+
 #sorts {
     display: flex;
     flex-direction: row;
@@ -16,12 +63,15 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-    margin-top: 20px;
     padding-top: 30px;
     font-size: 18;
     color: #1d1d1d;
     font-weight: bold;
     border-top: 5px solid #1F232B;
+}
+
+.closed {
+    height: 0 !important;
 }
 
 .card {

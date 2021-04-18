@@ -11,7 +11,28 @@
         <!------- Navigation ------->
         <?php include('navigation.php'); ?>
 
+
         <!------- Filters ------->
+        <section id="filters">
+
+            <div id="filters-toggle" onclick="toggleFilters()">
+                <p>Filter<span>click to expand...</span></p>
+                <span class="push">
+                    <svg width="22" height="17" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 0L26.0574 20.25L0.942632 20.25L13.5 0Z" fill="#1F232B"/>
+                    </svg>
+                </span>
+            </div>
+
+            <div id="filters-container">
+
+                <p>hi</p>
+
+            </div>
+
+        </section>
+
+        <!------- Sorting & Genre ------->
         <section id="sorts">
             <div>
                 <label for="sort">Sort By</label>

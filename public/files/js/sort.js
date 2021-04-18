@@ -1,3 +1,17 @@
+function toggleFilters() {
+
+    var filtersContainer = document.getElementById('filters-container');
+
+    if(filtersContainer.clientHeight == 0) {
+        filtersContainer.style.height = "500px";
+        filtersContainer.style.borderTop = "5px solid #1F232B";
+    } else {
+        filtersContainer.style.height = "0px";
+        filtersContainer.style.borderTop = "0px solid #1F232B";
+    }
+
+}
+
 function sort(type) {
 
     switch(type) {
