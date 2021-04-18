@@ -22,6 +22,7 @@ class Browse extends CI_Controller {
 	{
 
 		$data['movies'] = $this->browse_model->all_movies();
+		$data['genres'] = $this->browse_model->all_genres();
 
 		$this->load->view('browse_view', $data);
 	}

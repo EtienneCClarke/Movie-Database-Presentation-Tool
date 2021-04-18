@@ -14,4 +14,9 @@ class browse_model extends CI_Model{
                                     INNER JOIN released USING(releasedID)"); 
         return $query->result(); 
     }
+
+    public function all_genres() {
+        $query = $this->db->query("SELECT * FROM genre;");
+        return $query->result();
+    }
 }

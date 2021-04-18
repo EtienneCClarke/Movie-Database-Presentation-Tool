@@ -35,6 +35,11 @@
 
 label[for="order"] {
     margin-left: 20px;
+    display: none;
+}
+
+#order {
+    display: none;
 }
 
 select {
@@ -49,4 +54,10 @@ select {
 
 select:focus {
     outline: none;
+}
+
+option {
+    color: #1D1D1D;
+    font-size: 100%;
+    font-weight: bold;
 }

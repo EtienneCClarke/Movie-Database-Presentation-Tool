@@ -15,18 +15,17 @@
         <section id="sorts">
             <div>
                 <label for="sort">Sort By</label>
-                <select name="sort" id="sort">
+                <select name="sort" id="sort" onchange="sort(this.options[this.selectedIndex].value)">
                     <option value="unselected">None</option>
                     <option value="title">Title</option>
                     <option value="rating">Rating</option>
                     <option value="release">Release Date</option>
                     <option value="budget">Budget</option>
                 </select>
-                <label for="order">In Order</label>
+                <label for="order" id="order-label">In Order</label>
                 <select name="order" id="order">
-                    <option value="unselected">None</option>
+                    <option value="desc" selected>Desc</option>
                     <option value="asc">Asc</option>
-                    <option value="desc">Desc</option>
                 </select>
             </div>
             <div class="push">
@@ -34,17 +33,18 @@
                 <select name="genre" id="genre">
                     <option value="unselected" selected>Choose</option>
                     <option value="Action">Action</option>
-                    <option value="Anime">Anime</option>
-                    <option value="Comedies">Comedies</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Comedy">Comedy</option>
                     <option value="Crime">Crime</option>
-                    <option value="Cult">Cult</option>
-                    <option value="Documentaries">Documentaries</option>
-                    <option value="Dramas">Dramas</option>
+                    <option value="Mystery">Mystery</option>
                     <option value="Fanatasy">Fanatasy</option>
                     <option value="Horror">Horror</option>
-                    <option value="Sci-Fi">Sci-Fi</option>
-                    <option value="Sports">Sports</option>
                     <option value="Thriller">Thriller</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Biography">Biography</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
                 </select>
             </div>
         </section>
@@ -61,6 +61,8 @@
 
                 if(is_array($movies) || is_object($movies)) {
                     
+                    $index = 0;
+
                     foreach($movies as $row) { 
 
                         $name = $row->title;
@@ -69,7 +71,7 @@
                         }
                         ?>
 
-                        <div class="card">
+                        <div class="card" id="<?php echo $index ?>">
                             <div class="card-image">
                             <?php echo '<img src="data:image;base64,'.base64_encode($row->image).'" width="100%" height="100%"/>'?>
                             </div>
@@ -79,7 +81,7 @@
                                 </div>
                                 <div class="card-info-container">
                                     <div class="card-info">
-                                        <a href="<?php echo base_url('./index.php/preview/'.$row->movieID); ?>"><?php echo $name ?></a>
+                                        <a class="card-title" href="<?php echo base_url('./index.php/preview/'.$row->movieID); ?>"><?php echo $name ?></a>
                                         <span class="card-date"><?php echo $row->year ?></span>
                                         <span class="card-budget">Budget: $<?php echo $row->budget ?></span>
                                     </div>
@@ -92,12 +94,15 @@
                                 </div>
                             </div>
                         </div>
-            <?php   }   }   ?>
+            <?php   $index++;   }   }   ?>
         </section>
         
         <!------- Movie Cards ------->
         <?php include('footer.php') ?>
         
     </body>
+
+    <!------- SCRIPTS ------->
+    <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
 
 </html>
