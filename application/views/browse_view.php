@@ -30,7 +30,7 @@
             </div>
             <div class="push">
                 <label for="genre">Genre</label>
-                <select name='genreIDTwo'>
+                <select name='genre' id="genre" onchange="filterGenre(this.options[this.selectedIndex].value)">
                 <option value='unselected' selected>Choose</option>
                     <?php
                         if(is_array($genre) || is_object($genre))
@@ -68,6 +68,8 @@
                         ?>
 
                         <div class="card">
+                            <input class="genreID" type="hidden" value="<?php echo $row->genreID;?>">
+                            <input class="genreID" type="hidden" value="<?php echo $row->genreID2;?>">
                             <div class="card-image">
                             <?php echo '<img src="data:image;base64,'.base64_encode($row->image).'" width="100%" height="100%"/>'?>
                             </div>
@@ -95,11 +97,10 @@
         
         <!------- Movie Cards ------->
         <?php include('footer.php') ?>
-        
-        <!------- SCRIPTS ------->
-        <script src="<?php echo base_url();?>public/libraries/js/jquery-1.12.4.min.js"></script>
-        <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
-
     </body>
+
+    <!------- SCRIPTS ------->
+    <script src="<?php echo base_url();?>public/libraries/js/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
 
 </html>

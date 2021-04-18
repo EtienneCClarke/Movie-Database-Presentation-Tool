@@ -81,6 +81,33 @@ function orderCardsInDom(cards) {
 
 }
 
+function filterGenre(genreID) {
+
+    var cardElements = document.getElementsByClassName('card');
+
+    var cards = [];
+    for(var i = 0; i < cardElements.length; i++) {
+        cards[i] = cardElements[i];
+    }
+
+    for(var i = 0; i < cards.length; i++) {
+        
+        var genres = cards[i].getElementsByClassName('genreID');
+
+        if(genreID != 'unselected') {
+            if(genres[0].value == genreID || genres[1].value == genreID) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        } else {
+            cards[i].style.display = "";
+        }
+
+    }
+
+}
+
 function bubbleSort(array, className) {
 
     for(var i = 0; i < array.length; i++) {
