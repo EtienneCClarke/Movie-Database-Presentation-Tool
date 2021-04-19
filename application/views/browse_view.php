@@ -12,7 +12,6 @@
         <!------- Navigation ------->
         <?php include('navigation.php'); ?>
 
-
         <!------- Filters ------->
         <section id="filters">
 
@@ -153,6 +152,12 @@
                 
                 </div>
 
+                <div class="break"></div>
+
+                <div id="apply-container">
+                    <a id="apply">Apply</a>
+                </div>
+
             </div>
 
         </section>
@@ -246,8 +251,8 @@
     </body>
 
     <!------- SCRIPTS ------->
-    <script src="<?php echo base_url();?>public/libraries/js/jquery-1.12.4.min.js"></script>
     <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
     <script src="<?php echo base_url();?>public/files/js/multi-handle-slider.js"></script>
+    <script src="<?php echo base_url();?>public/files/js/filter.js"></script>
 
 </html>
