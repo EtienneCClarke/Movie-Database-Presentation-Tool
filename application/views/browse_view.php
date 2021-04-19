@@ -27,30 +27,130 @@
 
             <div id="filters-container">
 
-                <div class="filter-container">
-                    <p>MIN</p>
-                    <div class="multi-range-slider" id="budget">
-                        <input type="range" id="budget-input-left" min="0" max="100" value="25">
-                        <input type="range" id="budget-input-right" min="0" max="100" value="75">
+                <div class="filters-column">
 
-                        <div class="slider">
-                            <div class="track"></div>
-                            <div class="range red"></div>
-                            <div class="thumb left">
-                                <svg class="arrow-left" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
-                                </svg>
-                                <p>$<span>50</span>m</p>
+                    <div class="filter-content-container">
+                        <h3>Budget</h3>
+                        <div class="filter-content">
+                            <p>MIN</p>
+                            <div class="multi-range-slider" id="budget">
+                                <input type="range" id="budget-input-left" min="0" max="100" value="25">
+                                <input type="range" id="budget-input-right" min="0" max="100" value="75">
+
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range red"></div>
+                                    <div class="thumb left">
+                                        <svg class="arrow-left" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p>$<span class="thumb-value"></span>m</p>
+                                    </div>
+                                    <div class="thumb right">
+                                        <svg class="arrow-right" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p>$<span class="thumb-value"></span>m</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="thumb right">
-                                <svg class="arrow-right" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
-                                </svg>
-                                <p>$<span>250</span>m</p>
-                            </div>
+                            <p>MAX</p>
                         </div>
                     </div>
-                    <p>MAX</p>
+
+                    <div class="filter-content-container">
+                        <h3>Release Year</h3>
+                        <div class="filter-content">
+                            <p>MIN</p>
+                            <div class="multi-range-slider" id="release">
+                                <input type="range" id="release-input-left" min="1900" max="<?php echo date('Y');?>" value="1930">
+                                <input type="range" id="release-input-right" min="1900" max="<?php echo date('Y');?>" value="<?php echo ((date('Y')-1900)*0.75)+1900; ?>">
+
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range blue"></div>
+                                    <div class="thumb left">
+                                        <svg class="arrow-left" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p><span class="thumb-value"></span></p>
+                                    </div>
+                                    <div class="thumb right">
+                                        <svg class="arrow-right" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p><span class="thumb-value"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>MAX</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="filters-column push">
+
+                    <div class="filter-content-container">
+                        <h3>Revenue</h3>
+                        <div class="filter-content">
+                            <p>MIN</p>
+                            <div class="multi-range-slider" id="revenue">
+                                <input type="range" id="revenue-input-left" min="0" max="100" value="25">
+                                <input type="range" id="revenue-input-right" min="0" max="100" value="75">
+
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range green"></div>
+                                    <div class="thumb left">
+                                        <svg class="arrow-left" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p>$<span class="thumb-value"></span>m</p>
+                                    </div>
+                                    <div class="thumb right">
+                                        <svg class="arrow-right" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p>$<span class="thumb-value"></span>m</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>MAX</p>
+                        </div>
+                    </div>
+
+                    <div class="filter-content-container">
+                        <h3>Runtime (minutes)</h3>
+                        <div class="filter-content">
+                            <p>MIN</p>
+                            <div class="multi-range-slider" id="runtime">
+                                <input type="range" id="runtime-input-left" min="0" max="360" value="180">
+                                <input type="range" id="runtime-input-right" min="0" max="360" value="270">
+
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range orange"></div>
+                                    <div class="thumb left">
+                                        <svg class="arrow-left" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p><span class="thumb-value"></span></p>
+                                    </div>
+                                    <div class="thumb right">
+                                        <svg class="arrow-right" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                        </svg>
+                                        <p><span class="thumb-value"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>MAX</p>
+                        </div>
+                    </div>
+                
                 </div>
 
             </div>

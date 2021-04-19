@@ -76,20 +76,49 @@
     height: 0;
     overflow: hidden;
     transition: 0.5s;
+    display: flex;
+    flex-direction: row;
 }
 
 #filter-svg {
     transition: 0.5s;
 }
 
-.filter-container {
+.filters-column {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.spacer {
+    width: 1px;
+    height: 80%;
+    background: #c1c1c1;
+    margin-left: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.filter-content-container {
+    width: 830px;
+}
+
+.filter-content-container h3 {
+    font-size: 18;
+    text-align: center;
+    font-weight: bold;
+    color: #616161;
+}
+
+.filter-content {
     width: 830px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.filter-container p {
+.filter-content p {
     margin: 0;
     padding: 0;
     color: #616161;
