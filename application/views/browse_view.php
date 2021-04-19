@@ -16,9 +16,9 @@
         <section id="filters">
 
             <div id="filters-toggle" onclick="toggleFilters()">
-                <p>Filter<span>click to expand...</span></p>
+                <p>Filter<span id="toggle-text">click to expand...</span></p>
                 <span class="push">
-                    <svg width="22" height="17" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="filter-svg" width="22" height="17" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.5 0L26.0574 20.25L0.942632 20.25L13.5 0Z" fill="#1F232B"/>
                     </svg>
                 </span>
@@ -26,7 +26,17 @@
 
             <div id="filters-container">
 
-                <p>hi</p>
+                <div class="multi-range-slider">
+                    <input type="range" id="input-left" min="0" max="100" value="25">
+                    <input type="range" id="input-right" min="0" max="100" value="25">
+
+                    <div class="slider">
+                        <div class="track"></div>
+                        <div class="range"></div>
+                        <div class="thumb left"></div>
+                        <div class="thumb right"></div>
+                    </div>
+                </div>
 
             </div>
 
@@ -73,9 +83,8 @@
 
         <!------- Movie Cards ------->
         <section id="all-movies">
+            <div id="all-movies-content">
             <?php 
-
-
                 if(is_array($movies) || is_object($movies)) {
                     
                     $index = 0;
@@ -114,6 +123,7 @@
                             </div>
                         </div>
             <?php   }   }   ?>
+            </div>
         </section>
         
         <!------- Movie Cards ------->

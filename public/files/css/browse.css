@@ -4,9 +4,18 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding-bottom: 100px;
+}
+
+#all-movies-content {
+    width: 95%;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #filters {
@@ -52,7 +61,11 @@
 #filters-container {
     box-sizing: border-box;
     overflow: hidden;
-    height: 0px;
+    height: 0;
+    transition: 0.5s;
+}
+
+#filter-svg {
     transition: 0.5s;
 }
 

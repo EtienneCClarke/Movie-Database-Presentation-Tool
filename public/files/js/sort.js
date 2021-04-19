@@ -5,9 +5,26 @@ function toggleFilters() {
     if(filtersContainer.clientHeight == 0) {
         filtersContainer.style.height = "500px";
         filtersContainer.style.borderTop = "5px solid #1F232B";
+
+        // Update text
+        var text = document.getElementById('toggle-text');
+        text.textContent = "click to close...";
+
+        // Rotate svg
+        var svg = document.getElementById('filter-svg');
+        svg.style.transform = "rotate(180deg)";
+
     } else {
         filtersContainer.style.height = "0px";
         filtersContainer.style.borderTop = "0px solid #1F232B";
+
+        // Update text
+        var text = document.getElementById('toggle-text');
+        text.textContent = "click to expand...";
+
+        // Rotate svg
+        var svg = document.getElementById('filter-svg');
+        svg.style.transform = "rotate(0deg)";
     }
 
 }
