@@ -256,6 +256,5 @@
     <!------- SCRIPTS ------->
     <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
     <script src="<?php echo base_url();?>public/files/js/multi-handle-slider.js"></script>
-    <script src="<?php echo base_url();?>public/files/js/filter.js"></script>
 
 </html>
