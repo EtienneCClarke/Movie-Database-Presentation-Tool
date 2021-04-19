@@ -127,7 +127,7 @@
                         <div class="filter-content">
                             <p>MIN</p>
                             <div class="multi-range-slider" id="runtime">
-                                <input type="range" id="runtime-input-left" min="0" max="360" value="180">
+                                <input type="range" id="runtime-input-left" min="0" max="360" value="90">
                                 <input type="range" id="runtime-input-right" min="0" max="360" value="270">
 
                                 <div class="slider">

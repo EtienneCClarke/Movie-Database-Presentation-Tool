@@ -77,7 +77,7 @@ function setLeftValue(inputLeft, inputRight, thumbLeft, range) {
 setLeftValue(budgetInputLeft, budgetInputRight, budgetThumbLeft, budgetRange);
 setLeftValue(releaseInputLeft, releaseInputRight, releaseThumbLeft, releaseRange);
 setLeftValue(revenueInputLeft, revenueInputRight, revenueThumbLeft, revenueRange);
-// setLeftValue(runtimeInputLeft, runtimeInputRight, runtimeThumbLeft, runtimeRange);
+setLeftValue(runtimeInputLeft, runtimeInputRight, runtimeThumbLeft, runtimeRange);
 
 function setRightValue(inputLeft, inputRight, thumbRight, range) {
 
@@ -98,7 +98,7 @@ function setRightValue(inputLeft, inputRight, thumbRight, range) {
 setRightValue(budgetInputLeft, budgetInputRight, budgetThumbRight, budgetRange);
 setRightValue(releaseInputLeft, releaseInputRight, releaseThumbRight, releaseRange);
 setRightValue(revenueInputLeft, revenueInputRight, revenueThumbRight, revenueRange);
-// setRightValue(runtimeInputLeft, runtimeInputRight, runtimeThumbRight, runtimeRange);
+setRightValue(runtimeInputLeft, runtimeInputRight, runtimeThumbRight, runtimeRange);
 
 budgetInputLeft.addEventListener("input", function(){setLeftValue(budgetInputLeft, budgetInputRight, budgetThumbLeft, budgetRange)});
 budgetInputRight.addEventListener("input", function(){setRightValue(budgetInputLeft, budgetInputRight, budgetThumbRight, budgetRange)});
@@ -106,5 +106,5 @@ releaseInputLeft.addEventListener("input", function(){setLeftValue(releaseInputL
 releaseInputRight.addEventListener("input", function(){setRightValue(releaseInputLeft, releaseInputRight, releaseThumbRight, releaseRange)});
 revenueInputLeft.addEventListener("input", function(){setLeftValue(revenueInputLeft, revenueInputRight, revenueThumbLeft, revenueRange)});
 revenueInputRight.addEventListener("input", function(){setRightValue(revenueInputLeft, revenueInputRight, revenueThumbRight, revenueRange)});
-// runtimeInputLeft.addEventListener("input", function(){setLeftValue(runtimeInputLeft, runtimeInputRight, runtimeThumbLeft, runtimeRange)});
-// runtimeInputRight.addEventListener("input", function(){setRightValue(runtimeInputLeft, runtimeInputRight, runtimeThumbRight, runtimeRange)});
+runtimeInputLeft.addEventListener("input", function(){setLeftValue(runtimeInputLeft, runtimeInputRight, runtimeThumbLeft, runtimeRange)});
+runtimeInputRight.addEventListener("input", function(){setRightValue(runtimeInputLeft, runtimeInputRight, runtimeThumbRight, runtimeRange)});
