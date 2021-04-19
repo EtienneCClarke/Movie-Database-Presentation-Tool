@@ -78,10 +78,30 @@
     transition: 0.5s;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #filter-svg {
     transition: 0.5s;
+}
+
+#apply-container {
+    margin-left: auto;
+}
+
+#apply {
+    color: white;
+    font-size: 16;
+    font-weight: bold;
+    background: #1F232B;
+    border-radius: 30px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.break {
+    height: 0;
+    flex-basis: 100%;
 }
 
 .filters-column {
@@ -169,3 +189,21 @@ option {
     font-size: 100%;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 1765px) {
+    
+    .filters-column {
+        height: unset;
+        width: 100%;
+        align-items: center;
+    }
+
+    .spacer {
+        display: none;
+    }
+
+    .filters-column:last-of-type {
+        margin-bottom: 50px;
+    }
+
+  }

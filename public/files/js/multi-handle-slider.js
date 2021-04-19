@@ -3,7 +3,13 @@ function toggleFilters() {
     var filtersContainer = document.getElementById('filters-container');
 
     if(filtersContainer.clientHeight == 0) {
-        filtersContainer.style.height = "400px";
+
+        if(window.innerWidth <= 1765) {
+            filtersContainer.style.height = "500px";
+            filtersContainer.getElementsByClassName('filters-column')[1].classList.remove('push');
+        } else {
+            filtersContainer.style.height = "500px";
+        }
         filtersContainer.style.borderTop = "5px solid #1F232B";
 
         // Update text
