@@ -40,13 +40,13 @@
                                 <svg class="arrow-left" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
                                 </svg>
-                                <p>$<span>2500</span>m</p>
+                                <p>$<span>50</span>m</p>
                             </div>
                             <div class="thumb right">
                                 <svg class="arrow-right" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
                                 </svg>
-                                <p>$<span>100</span>m</p>
+                                <p>$<span>250</span>m</p>
                             </div>
                         </div>
                     </div>

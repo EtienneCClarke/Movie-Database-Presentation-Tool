@@ -40,12 +40,15 @@
 
 .thumb.left {
     left: 25%;
-    float: right;
 }
 
 .thumb.right {
     right: 25%;
-    float: left;
+}
+
+.thumb.right svg {
+    position: absolute;
+    right: 0;
 }
 
 .thumb.left p {
@@ -53,7 +56,7 @@
 }
 
 .thumb.right p {
-    transform: translateX(30%);
+    transform: translate(30%, 15px);
 }
 
 input[type="range"] {
