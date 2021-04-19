@@ -33,8 +33,8 @@
                         <div class="filter-content">
                             <p>MIN</p>
                             <div class="multi-range-slider" id="budget">
-                                <input type="range" id="budget-input-left" min="0" max="100" value="25">
-                                <input type="range" id="budget-input-right" min="0" max="100" value="75">
+                                <input type="range" name="budget_one" id="budget-input-left" min="0" max="100" value="25">
+                                <input type="range" name="budget_two" id="budget-input-right" min="0" max="100" value="75">
 
                                 <div class="slider">
                                     <div class="track"></div>
@@ -62,8 +62,8 @@
                         <div class="filter-content">
                             <p>MIN</p>
                             <div class="multi-range-slider" id="release">
-                                <input type="range" id="release-input-left" min="1900" max="<?php echo date('Y');?>" value="1930">
-                                <input type="range" id="release-input-right" min="1900" max="<?php echo date('Y');?>" value="<?php echo ((date('Y')-1900)*0.75)+1900; ?>">
+                                <input type="range" name="year_one" id="release-input-left" min="1900" max="<?php echo date('Y');?>" value="1930">
+                                <input type="range" name="year_two" id="release-input-right" min="1900" max="<?php echo date('Y');?>" value="<?php echo ((date('Y')-1900)*0.75)+1900; ?>">
 
                                 <div class="slider">
                                     <div class="track"></div>
@@ -97,8 +97,8 @@
                         <div class="filter-content">
                             <p>MIN</p>
                             <div class="multi-range-slider" id="revenue">
-                                <input type="range" id="revenue-input-left" min="0" max="100" value="25">
-                                <input type="range" id="revenue-input-right" min="0" max="100" value="75">
+                                <input type="range" name="revenue_one" id="revenue-input-left" min="0" max="100" value="25">
+                                <input type="range" name="revenue_two" id="revenue-input-right" min="0" max="100" value="75">
 
                                 <div class="slider">
                                     <div class="track"></div>
@@ -126,8 +126,8 @@
                         <div class="filter-content">
                             <p>MIN</p>
                             <div class="multi-range-slider" id="runtime">
-                                <input type="range" id="runtime-input-left" min="0" max="360" value="90">
-                                <input type="range" id="runtime-input-right" min="0" max="360" value="270">
+                                <input type="range" name="runtime_one" id="runtime-input-left" min="0" max="360" value="90">
+                                <input type="range" name="runtime_two" id="runtime-input-right" min="0" max="360" value="270">
 
                                 <div class="slider">
                                     <div class="track"></div>

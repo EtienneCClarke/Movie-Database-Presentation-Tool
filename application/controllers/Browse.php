@@ -31,18 +31,14 @@ class Browse extends CI_Controller {
 
 	public function filter_movies()
 	{
-		$data['budget_one'] = $this->input->post('#', TRUE); 
-		$data['budget_two'] = $this->input->post('#', TRUE); 
-		$data['year_one'] = $this->input->post('#', TRUE); 
-		$data['year_two'] = $this->input->post('#', TRUE); 
-		$data['revenue_one'] = $this->input->post('#', TRUE); 
-		$data['revenue_two'] = $this->input->post('#', TRUE); 
-		$data['runtime_one'] = $this->input->post('#', TRUE); 
-		$data['runtime_two'] = $this->input->post('#', TRUE); 
-		$data['sort'] = $this->input->post('sort', TRUE); 
-		$data['genre'] = $this->input->post('genre', TRUE); 
-		$data['order'] = $this->input->post('order', TRUE); 
-
+		$data['budget_one'] = $this->input->post('budget_one', TRUE); 
+		$data['budget_two'] = $this->input->post('budget_two', TRUE); 
+		$data['year_one'] = $this->input->post('year_one', TRUE); 
+		$data['year_two'] = $this->input->post('year_two', TRUE); 
+		$data['revenue_one'] = $this->input->post('revenue_one', TRUE); 
+		$data['revenue_two'] = $this->input->post('revenue_two', TRUE); 
+		$data['runtime_one'] = $this->input->post('runtime_one', TRUE); 
+		$data['runtime_two'] = $this->input->post('runtime_two', TRUE); 
 
 		$data['movies'] = $this->filter_model->filter($data);
 		$data['genre'] = $this->add_movie_model->getGenre(); 
