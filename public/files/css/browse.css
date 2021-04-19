@@ -10,12 +10,25 @@
 #all-movies-content {
     width: 95%;
     display: flex;
-    text-align: center;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
+}
+
+#sorts {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    font-size: 18;
+    color: #1d1d1d;
+    font-weight: bold;
+    border-top: 5px solid #1F232B;
 }
 
 #filters {
@@ -60,8 +73,8 @@
 
 #filters-container {
     box-sizing: border-box;
-    overflow: hidden;
     height: 0;
+    overflow: hidden;
     transition: 0.5s;
 }
 
@@ -69,18 +82,19 @@
     transition: 0.5s;
 }
 
-#sorts {
+.filter-container {
+    width: 830px;
     display: flex;
     flex-direction: row;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    padding-top: 30px;
-    font-size: 18;
-    color: #1d1d1d;
+    justify-content: space-between;
+}
+
+.filter-container p {
+    margin: 0;
+    padding: 0;
+    color: #616161;
     font-weight: bold;
-    border-top: 5px solid #1F232B;
+    font-size: 13;
 }
 
 .closed {

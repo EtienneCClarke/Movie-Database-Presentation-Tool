@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/cards.css"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/footer.css"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/browse.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/multi-handle-slider.css"/>
     </head>
 
     <body>
@@ -26,16 +27,30 @@
 
             <div id="filters-container">
 
-                <div class="multi-range-slider">
-                    <input type="range" id="input-left" min="0" max="100" value="25">
-                    <input type="range" id="input-right" min="0" max="100" value="25">
+                <div class="filter-container">
+                    <p>MIN</p>
+                    <div class="multi-range-slider" id="budget">
+                        <input type="range" id="budget-input-left" min="0" max="100" value="25">
+                        <input type="range" id="budget-input-right" min="0" max="100" value="75">
 
-                    <div class="slider">
-                        <div class="track"></div>
-                        <div class="range"></div>
-                        <div class="thumb left"></div>
-                        <div class="thumb right"></div>
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range red"></div>
+                            <div class="thumb left">
+                                <svg class="arrow-left" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                </svg>
+                                <p>$<span>2500</span>m</p>
+                            </div>
+                            <div class="thumb right">
+                                <svg class="arrow-right" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 0L12.9952 11.25H0.00480938L6.5 0Z" fill="#616161"/>
+                                </svg>
+                                <p>$<span>100</span>m</p>
+                            </div>
+                        </div>
                     </div>
+                    <p>MAX</p>
                 </div>
 
             </div>
@@ -133,5 +148,6 @@
     <!------- SCRIPTS ------->
     <script src="<?php echo base_url();?>public/libraries/js/jquery-1.12.4.min.js"></script>
     <script src="<?php echo base_url();?>public/files/js/sort.js"></script>
+    <script src="<?php echo base_url();?>public/files/js/multi-handle-slider.js"></script>
 
 </html>
