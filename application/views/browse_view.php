@@ -155,7 +155,8 @@
                 <div class="break"></div>
 
                 <div id="apply-container">
-                    <a id="apply">Apply</a>
+                    <a id="reset" class="btn">Reset*</a>
+                    <a id="apply" class="btn">Apply</a>
                 </div>
 
             </div>
@@ -172,6 +173,7 @@
                     <option value="card-rating">Rating</option>
                     <option value="card-date">Release Date</option>
                     <option value="card-budget">Budget</option>
+                    <option value="card-revenue">Revenue</option>
                 </select>
                 <label for="order" id="order-label">In Order</label>
                 <select name="order" id="order" onchange="sortBy('null')">
@@ -232,6 +234,7 @@
                                         <a class="card-title" href="<?php echo base_url('./index.php/preview/'.$row->movieID); ?>"><?php echo $name ?></a>
                                         <span class="card-date"><?php echo $row->year ?></span>
                                         <div class="card-budget-container">Budget: $<span class="card-budget"><?php echo $row->budget ?></span></div>
+                                        <div class="card-revenue-container">Revenue: $<span class="card-revenue"><?php echo $row->revenue ?></span></div>
                                     </div>
                                     <div class="card-rating push">
                                         <h3><?php echo $row->rating ?></h3>

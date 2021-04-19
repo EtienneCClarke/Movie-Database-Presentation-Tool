@@ -21,6 +21,10 @@ function sort(type) {
             showOrder();
             sortBy(type);
             break;
+        case "card-revenue":
+            showOrder();
+            sortBy(type);
+            break;
     }
 
 }
@@ -119,7 +123,7 @@ function bubbleSort(array, className) {
             var A = (array[j].getElementsByClassName(className))[0].textContent;
             var B = (array[min].getElementsByClassName(className))[0].textContent;
 
-            if(document.getElementById('sort').value.toString() == 'card-budget') {
+            if(document.getElementById('sort').value.toString() == 'card-budget' || document.getElementById('sort').value.toString() == 'card-revenue') {
                 A = parseFloat(A);
                 B = parseFloat(B);
             }

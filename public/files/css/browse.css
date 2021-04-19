@@ -89,14 +89,21 @@
     margin-left: auto;
 }
 
-#apply {
-    color: white;
-    font-size: 16;
-    font-weight: bold;
-    background: #1F232B;
+.btn {
     border-radius: 30px;
     padding: 5px 15px;
     cursor: pointer;
+    font-size: 16;
+    font-weight: bold;
+}
+
+#apply {
+    color: white;
+    background: #1F232B;
+}
+
+#reset {
+    display: none;
 }
 
 .break {
@@ -159,6 +166,19 @@
 
 .card:hover {
     transform: scale(1.05);
+}
+
+.card-budget-container {
+    margin-top: 0px !important;
+}
+
+.card-revenue-container {
+    margin-top: -5px;
+    font-size: 10;
+    font-weight: bold;
+    color: #CECECE;
+    display: flex;
+    flex-direction: row;
 }
 
 label[for="order"] {
