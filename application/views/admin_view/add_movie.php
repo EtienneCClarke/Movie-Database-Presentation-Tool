@@ -1,253 +1,162 @@
 <!DOCTYPE html>
     <header>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/navigation.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/navigation.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/add_movie.css"/>
         <title>Add Movie</title>
-        <h1>Add Movies to database</h1>
     </header>
     
     <body>
+        <div class="container">
+        <h1>Add Movies to database</h1>
+            <div class="message">
+                <?php echo $genreMessage; ?>
+                <?php echo $actorMessage; ?>
+                <?php echo $directorMessage; ?>
+                <?php echo $releaseYearMessage; ?>
+                <?php echo $movieMessage; ?>
+            </div>
 <!----------------------------------GENRE----------------------------------------->
-        <h2>Genre</h2>
-        <table border='1'> 
-                    <tr>
-                        <th> Genre </th>
-                        <th> Delete </th>
-                    </tr>
-        <?php
-        if(is_array($genre) || is_object($genre))
-        {
-            foreach($genre as $row)
-            {
-            $deleteGenre = base_url('./index.php/deleteGenre/'.$row->genreID); 
-            echo <<<_END
-                    <tr>
-                        <td> $row->genre </td>
-                        <td><a href=$deleteGenre> Delete </a></td>
-                    </tr>
-_END;
-            }
-        }
-        ?>
-        </table>
-        <form method='post' action="<?php echo base_url('./index.php/add_genre') ?>">
-			<label> Genre: </label>
-			<input type='text' name='genre' maxlength='255'required/>
-            <input type='submit' value='Add'>
-        </form>
-        <?php echo $genreMessage; ?><br>
+            <form method='post' action="<?php echo base_url('./index.php/add_genre') ?>">
+                <h2>Genre</h2>
+                <input type='text' name='genre' placeholder='genre name...' maxlength='255'required/>
+                <input type='submit' value='Add'>
+            </form>
 <!----------------------------------ACTOR----------------------------------------->
-        <h2>Actor</h2>
-        <table border='1'> 
-                    <tr>
-                        <th> First name </th>
-                        <th> Last name </th>
-                        <th> Delete </th>
-                    </tr>
-        <?php
-        if(is_array($actor) || is_object($actor))
-        {
-            foreach($actor as $row)
-            {
-            $deleteActor = base_url('./index.php/deleteActor/'.$row->actorID); 
-            echo <<<_END
-                    <tr>
-                        <td> $row->firstname </td>
-                        <td> $row->lastname </td>
-                        <td><a href=$deleteActor> Delete </a></td>
-                    </tr>
-_END;
-            }
-        }
-        ?>
-        </table><br>
-        <form method='post' action="<?php echo base_url('./index.php/add_actor') ?>">
-			<label> First name: </label>
-			<input type='text' name='actorFirstname' maxlength='255'required/>
-            <label> Last name: </label>
-            <input type='text' name='actorLastname' maxlength='255'required/>
-            <input type='submit' value='Add'>
-        </form>
-        <?php echo $actorMessage; ?><br>
+            <h2>Actor</h2>
+            <form method='post' action="<?php echo base_url('./index.php/add_actor') ?>">
+                <input type='text' name='actorFirstname' placeholder='First name...' maxlength='255'required/><br>
+                <input type='text' name='actorLastname' placeholder='Last name...' maxlength='255'required/>
+                <input type='submit' value='Add'>
+            </form>
 <!----------------------------------DIRECTOR----------------------------------------->
-        <h2>Director</h2>
-        <table border='1'> 
-                    <tr>
-                        <th> First name </th>
-                        <th> Last name </th>
-                        <th> Delete </th>
-                    </tr>
-        <?php
-        if(is_array($director) || is_object($director))
-        {
-            foreach($director as $row)
-            {
-            $deleteDirector = base_url('./index.php/deleteDirector/'.$row->directorID);
-            echo <<<_END
-                    <tr>
-                        <td> $row->firstname </td>
-                        <td> $row->lastname </td>
-                        <td><a href=$deleteDirector> Delete </a></td>
-                    </tr>
-_END;
-            }
-        }
-        ?>
-        </table><br>
-        <form method='post' action="<?php echo base_url('./index.php/add_director') ?>">
-            <label> First name: </label>
-			<input type='text' name='directorFirstname' maxlength='255'required/>
-            <label> Last name: </label>
-            <input type='text' name='directorLastname' maxlength='255'required/>
-            <input type='submit' value='Add'>
-        </form>
-        <?php echo $directorMessage; ?><br>
+            <h2>Director</h2>
+            <form method='post' action="<?php echo base_url('./index.php/add_director') ?>">
+                <input type='text' name='directorFirstname' placeholder='First name...' maxlength='255'required/><br>
+                <input type='text' name='directorLastname' placeholder='Last name...' maxlength='255'required/>
+                <input type='submit' value='Add'>
+            </form>
 <!----------------------------------YEAR RELEASED----------------------------------------->
-        <h2>Year released</h2>
-        <table border='1'> 
-                    <tr>
-                        <th> Year </th>
-                        <th> Delete </th>
-                    </tr>
-        <?php
-        if(is_array($year) || is_object($year))
-        {
-            foreach($year as $row)
-            {
-            $deleteYear = base_url('./index.php/deleteYear/'.$row->releasedID);
-            echo <<<_END
-                    <tr>
-                        <td> $row->year </td>
-                        <td><a href=$deleteYear> Delete </a></td>
-                    </tr>
-_END;
-            }
-        }
-        ?>
-        </table><br>
-        <form method='post' action="<?php echo base_url('./index.php/add_year') ?>">
-			<label> Release year: </label><br>
-			<input type='number' name='year' required/>
-            <input type='submit' value='Add'>
-        </form>
-        <?php echo $releaseYearMessage; ?>
+            <h2>Year released</h2>
+            <form method='post' action="<?php echo base_url('./index.php/add_year') ?>">
+                <input type='number' name='year' placeholder='Release year' required/>
+                <input type='submit' value='Add'>
+            </form>
 <!----------------------------------Movie----------------------------------------->
-        <h2>Add Movie</h2>
-        <table border='1'> 
-                    <tr>
-                        <th> Title </th>
-                        <th> Budget </th>
-                        <th> Revenue </th>
-                        <th> Duration </th>
-                        <th> Rating </th>
-                        <th> Delete </th>
-                    </tr>
-        <?php
-        if(is_array($movie) || is_object($movie))
-        {
-            foreach($movie as $row)
-            { 
-            $deleteMovie = base_url('./index.php/deleteMovie/'.$row->movieID);
-            echo <<<_END
-                    <tr>
-                        <td> $row->title </td>
-                        <td> $row->budget </td>
-                        <td> $row->revenue </td>
-                        <td> $row->duration </td>
-                        <td> $row->rating </td>
-                        <td><a href=$deleteMovie> Delete </a></td>
-                    </tr>
-_END;
-            }
-        }
-        ?>
-        </table><br>
-        <form method='post' action="<?php echo base_url('./index.php/add_movie') ?>">
-			<label> Title: </label>
-			<input type='text' name='title' maxlength='255'required/><br>
-            <label> Budget: </label>
-			<input type='decimal' name='budget' max='20'required/><br>
-            <label> Revenue: </label>
-			<input type='decimal' name='revenue' required/><br>
-            <label> Duration: </label>
-			<input type='text' name='duration' placeholder='HH:MM' required/><br>
-            <label> Rating: </label>
-			<input type='number' step='0.1' name='rating' placeholder='9.9' min='0.1' max='10' required/><br>
-            <label> Description: </label><br>
-			<textarea rows="4" cols="50" name="description" maxlength='1000'></textarea><br>
-            <label> Hyperlink: </label>
-			<input type='text' name='hyperlink' maxlength='255' required/><br>
+            <h2>Add Movie</h2>
+            <form method='post' action="<?php echo base_url('./index.php/add_movie') ?>">
+                <input type='text' name='title' placeholder='Title...' maxlength='255'required/><br>
+                <input type='decimal' name='budget' placeholder='Budget...' max='20' required/><br>
+                <input type='decimal' name='revenue' placeholder='Revenue...' required/><br>
+                <input type='text' name='duration' placeholder='Duration (HH:MM)...' required/><br>
+                <input type='number' step='0.1' name='rating' placeholder='Rating (1-10)...' min='0.1' max='10' required/><br>
+                <textarea rows="8" cols="50" name="description" placeholder='Storyline...' maxlength='1000'></textarea><br>
+                <input type='text' name='hyperlink' maxlength='255' placeholder='Link to external website...' required/><br>
 
-            <label> Genre #1: </label>
                 <select name='genreID'>
-                <option value='Select' required>Select</option>
-                    <?php
-                        if(is_array($genre) || is_object($genre))
-                        {
-                            foreach($genre as $row)
+                    <option value='Select' required>Select genre #1</option>
+                        <?php
+                            if(is_array($genre) || is_object($genre))
                             {
-                                echo "<option value='$row->genreID'>$row->genre</option>";
+                                foreach($genre as $row)
+                                {
+                                    echo "<option value='$row->genreID'>$row->genre</option>";
+                                }
                             }
-                        }
-                    ?>
+                        ?>
                 </select><br>
 
-                <label> Genre #2: </label>
                 <select name='genreIDTwo'>
-                <option value='Select' required>Select</option>
-                    <?php
-                        if(is_array($genre) || is_object($genre))
-                        {
-                            foreach($genre as $row)
+                    <option value='Select' required>Select genre #2</option>
+                        <?php
+                            if(is_array($genre) || is_object($genre))
                             {
-                                echo "<option value='$row->genreID'>$row->genre</option>";
+                                foreach($genre as $row)
+                                {
+                                    echo "<option value='$row->genreID'>$row->genre</option>";
+                                }
+                            }
+                        ?>
+                    </select><br>
+
+                <select name='directorID'>
+                    <option value='Select' required>Select director #1</option>
+                        <?php
+                        if(is_array($director) || is_object($director))
+                        {
+                            foreach($director as $row)
+                            {
+                                echo "<option value='$row->directorID'>$row->firstname $row->lastname</option>";
                             }
                         }
-                    ?>
-                </select><br>
-
-            <label> Director: </label>
-                <select name='directorID'>
-                <option value='Select' required>Select</option>
-			        <?php
-                    if(is_array($director) || is_object($director))
-                    {
-                        foreach($director as $row)
-                        {
-                            echo "<option value='$row->directorID'>$row->firstname $row->lastname</option>";
-                        }
-                    }
-                    ?>
-                </select><br>
+                        ?>
+                    </select><br>
                 
-            <label> Actor: </label>
+                <select name='directorID2'>
+                    <option value='Select' required>Select director #2</option>
+                        <?php
+                        if(is_array($director) || is_object($director))
+                        {
+                            foreach($director as $row)
+                            {
+                                echo "<option value='$row->directorID'>$row->firstname $row->lastname</option>";
+                            }
+                        }
+                        ?>
+                    </select><br>
+                    
                 <select name='actorID'>
-                <option value='Select' required>Select</option>
-			        <?php
-                    if(is_array($actor) || is_object($actor))
-                    {
-                        foreach($actor as $row)
+                    <option value='Select' required>Select actor #1</option>
+                        <?php
+                        if(is_array($actor) || is_object($actor))
                         {
-                            echo "<option value='$row->actorID'>$row->firstname $row->lastname</option>";
+                            foreach($actor as $row)
+                            {
+                                echo "<option value='$row->actorID'>$row->firstname $row->lastname</option>";
+                            }
                         }
-                    }
-                    ?>
-                </select><br>
+                        ?>
+                    </select><br>
 
-            <label> Release: </label>
-                <select name='releaseID'>
-                <option value='Select' required>Select</option>
-			        <?php
-                    if(is_array($year) || is_object($year))
-                    {
-                        foreach($year as $row)
+                <select name='actorID2'>
+                    <option value='Select' required>Select actor #2</option>
+                        <?php
+                        if(is_array($actor) || is_object($actor))
                         {
-                            echo "<option value='$row->releasedID'>$row->year</option>";
+                            foreach($actor as $row)
+                            {
+                                echo "<option value='$row->actorID'>$row->firstname $row->lastname</option>";
+                            }
                         }
-                    }
-                    ?>
-                </select><br>
-            <input type='submit' value='Add'>
-        </form>
-      <?php echo $movieMessage; ?>
+                        ?>
+                    </select><br>
+
+                    <select name='actorID3'>
+                    <option value='Select' required>Select actor #3</option>
+                        <?php
+                        if(is_array($actor) || is_object($actor))
+                        {
+                            foreach($actor as $row)
+                            {
+                                echo "<option value='$row->actorID'>$row->firstname $row->lastname</option>";
+                            }
+                        }
+                        ?>
+                    </select><br>
+
+                    <select name='releaseID'>
+                    <option value='Select' required>Select release year</option>
+                        <?php
+                        if(is_array($year) || is_object($year))
+                        {
+                            foreach($year as $row)
+                            {
+                                echo "<option value='$row->releasedID'>$row->year</option>";
+                            }
+                        }
+                        ?>
+                    </select><br>
+                <input type='submit' value='Add'>
+            </form>
+        </div>
     </body>
 </html>

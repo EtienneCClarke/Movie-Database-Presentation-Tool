@@ -1,0 +1,28 @@
+.container{
+    width: 35%; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+h1{
+    color: #E83338;
+}
+
+input, select, textarea{
+    width: 100%; 
+    padding: 14px 12px;  
+    margin: 12px 0; 
+    font-size: 20px; 
+}
+
+input[type=submit]{
+    background-color: lightgrey;
+}
+
+.message{
+    font-size: 20pt; 
+    text-align: center; 
+    color: yellow;
+    background-color: lightgray; 
+    padding: 12px; 
+}
