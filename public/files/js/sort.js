@@ -50,10 +50,6 @@ function sortBy(type) {
 
     orderCardsInDom(sortedCards);
 
-    if(document.getElementById('reset').style.display == "unset") {
-        filterCards();
-    }
-
 }
 
 function removeSort() {
@@ -98,6 +94,18 @@ function filterGenre(genreID) {
         cards[i] = cardElements[i];
     }
 
+    if(document.getElementById('reset').style.display == "unset") {
+        filterCards();
+        // Only filter visible ones after filter
+        for(var i = 0; i < cards.length; i++) {
+            if(cards[i].style.display = "none") {
+                cards[i] = "";
+            }
+        }
+    }
+
+    cards = cards.filter(function() { return true })
+
     for(var i = 0; i < cards.length; i++) {
         
         var genres = cards[i].getElementsByClassName('genreID');
@@ -111,11 +119,6 @@ function filterGenre(genreID) {
         } else {
             cards[i].style.display = "";
         }
-
-    }
-
-    if(document.getElementById('reset').style.display == "unset") {
-        filterCards();
     }
 
 }
@@ -173,11 +176,14 @@ function filterCards() {
 
     //Get all cards
     var cardElements = document.getElementsByClassName('card');
-
     var cards = [];
+
+    // Loop through all cards
     for(var i = 0; i < cardElements.length; i++) {
         cards[i] = cardElements[i];
     }
+
+    cards = cards.filter(function() { return true })
 
     //Loop through each card and check card falls within specification.
     for(var i = 0; i < cards.length; i++) {

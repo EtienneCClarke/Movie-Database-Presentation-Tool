@@ -182,19 +182,38 @@
                 </select>
             </div>
             <div class="push">
-                <label for="genre">Genre</label>
-                <select name='genre' id="genre" onchange="filterGenre(this.options[this.selectedIndex].value)">
-                <option value='unselected' selected>Choose</option>
-                    <?php
-                        if(is_array($genre) || is_object($genre))
-                        {
-                            foreach($genre as $row)
-                            {
-                                echo "<option value='$row->genreID'>$row->genre</option>";
+                <?php
+                    if($this->input->get('genreid', TRUE) !== null) {
+                        
+                        // Loop through all records from db and only pass through values that match the genre
+                        foreach($movies as $row) {
+                            if($this->input->get('genreid', TRUE) == -1) {
+                                break;
+                            } else {
+                                if($this->input->get('genreid', TRUE) != $row->genreID) {
+                                    array_splice($movies, array_search($row, $movies), 1);
+                                }
                             }
                         }
-                    ?>
-                </select>
+                    }
+                ?>
+                <form action="<?php echo site_url('browse');?>" method="get">
+                    <label for="genreid">Genre</label>
+                    <select name='genreid' id="genre" onchange="this.form.submit()">
+                    <option value='-1' <?php if($this->input->get('genreid', TRUE) !== null && $this->input->get('genreid', TRUE) == -1) {echo 'selected';}?>>Choose</option>
+                        <?php
+                            if(is_array($genre) || is_object($genre))
+                            {
+                                foreach($genre as $row)
+                                {
+                                    echo "<option value='$row->genreID'";
+                                    if($this->input->get('genreid', TRUE) == $row->genreID) { echo 'selected';}
+                                    echo ">$row->genre</option>";
+                                }
+                            }
+                        ?>
+                    </select>
+                </form>
             </div>
         </section>
 
