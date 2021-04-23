@@ -17,13 +17,18 @@ class Browse extends CI_Controller {
 
 		$this->load->model('browse_model');
 		$this->load->model('filter_model');
+		$this->load->model('search_model');
 		$this->load->model('admin_model/add_movie_model'); 
 	}
 
 	public function index()
 	{
 
-		$data['movies'] = $this->browse_model->all_movies();
+		if($this->input->get('search', TRUE) !== null) {
+			$data['movies'] = $this->search_model->search_($this->input->get('search', TRUE));
+		} else {
+			$data['movies'] = $this->browse_model->all_movies();
+		}
 		$data['genre'] = $this->add_movie_model->getGenre(); 
 
 		$this->load->view('browse_view', $data);

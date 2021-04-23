@@ -212,7 +212,8 @@ option {
 
 .searchtag {
     color: white;
-    font-size: 18;
+    font-size: 16;
+    font-weight: 500;
     background: #1F232B;
     line-height: 100%;
     border-radius: 30px;
@@ -222,6 +223,7 @@ option {
     cursor: pointer;
     margin-left: 2.5%;
     margin-top: 30px;
+    transition: 0.4s;
 }
 
 .searchtag p {
@@ -232,6 +234,11 @@ option {
 
 .searchtag p:last-of-type {
     margin-left: 25px;
+}
+
+.searchtag:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 4px rgba(131, 131, 131, 0.6);
 }
 
 .noselect {

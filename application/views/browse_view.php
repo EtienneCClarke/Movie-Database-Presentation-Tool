@@ -43,8 +43,8 @@
                         <div class="filter-content">
                             <p>MIN</p>
                             <div class="multi-range-slider" id="budget">
-                                <input type="range" name="budget_one" id="budget-input-left" min="0" max="100" value="25">
-                                <input type="range" name="budget_two" id="budget-input-right" min="0" max="100" value="75">
+                                <input type="range" name="budget_one" id="budget-input-left" min="0" max="1000" value="250">
+                                <input type="range" name="budget_two" id="budget-input-right" min="0" max="1000" value="750">
 
                                 <div class="slider">
                                     <div class="track"></div>
@@ -107,8 +107,8 @@
                         <div class="filter-content">
                             <p>MIN</p>
                             <div class="multi-range-slider" id="revenue">
-                                <input type="range" name="revenue_one" id="revenue-input-left" min="0" max="100" value="25">
-                                <input type="range" name="revenue_two" id="revenue-input-right" min="0" max="100" value="75">
+                                <input type="range" name="revenue_one" id="revenue-input-left" min="0" max="2000" value="500">
+                                <input type="range" name="revenue_two" id="revenue-input-right" min="0" max="2000" value="1500">
 
                                 <div class="slider">
                                     <div class="track"></div>

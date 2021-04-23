@@ -226,3 +226,8 @@ function filterCards() {
     }
 
 }
+
+searchtag = document.getElementsByClassName('searchtag')[0];
+searchtag.addEventListener("click", function() {
+    window.location.href = "browse";
+});
