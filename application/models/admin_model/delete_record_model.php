@@ -13,17 +13,9 @@ class delete_record_model extends CI_Model{
     }
 
     // delete an actor record by firstname and lastname
-    public function deleteActor($firstname, $lastname)
+    public function deleteActor($actorName)
     {
-        $this->db->query("DELETE FROM actor WHERE firstname='$firstname' AND lastname='$lastname'"); 
-
-        $query = $this->db->query("SELECT firstname, lastname FROM actor WHERE firstname='$firstname' AND lastname='$lastname'"); 
-        if($query->num_rows() == 1)
-        {
-            $this->db->query("DELETE FROM actor WHERE firstname='$firstname' AND lastname='$lastname'"); 
-        }else{
-            return false; 
-        }
+        $this->db->query("DELETE FROM actor WHERE CONCAT(firstname,' ',lastname) = '$actorName'"); 
     }
 
     // delete a director record by id

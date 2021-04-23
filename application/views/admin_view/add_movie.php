@@ -189,32 +189,19 @@
                         <input type='submit' value='Delete'>
                     </form>
 
-                    <form method='post' action="<?php echo base_url('./index.php/deleteGenre') ?>">
+                    <form method='post' action="<?php echo base_url('./index.php/deleteActor') ?>">
                         <h2>Actor</h2>
-                        <select name='actorFirstname'>
-                            <option value='Select' required>Select firstname</option>
+                        <select name='actorName'>
+                            <option value='Select' required>Select actor to delete</option>
                                 <?php
                                     if(is_array($actor) || is_object($actor))
                                     {
                                         foreach($actor as $row)
                                         {
-                                            echo "<option value='$row->firstname'>$row->firstname</option>";
+                                            echo "<option value='$row->firstname $row->lastname'>$row->firstname $row->lastname</option>";
                                         }
                                     }
                                 ?>
-                        </select><br>
-                        <select name='actorLastname'>
-                            <option value='Select' required>Select lastname</option>
-                                <?php
-                                    if(is_array($actorLastname) || is_object($actorLastname))
-                                    {
-                                        foreach($actorLastname as $row)
-                                        {
-                                            echo "<option value='$row->lastname'>$row->lastname</option>";
-                                        }
-                                    }
-                                ?>
-                        </select><br>
                         <input type='submit' value='Delete'>
                     </form>
                 </div>

@@ -25,15 +25,6 @@ class add_movie_model extends CI_Model{
     }
 
     /*
-    query select to get all actors' lastname from the 'actor' table
-    */
-    public function getActorLastname()
-    {
-        $query = $this->db->query("SELECT * FROM actor ORDER BY lastname ASC"); 
-        return $query->result(); 
-    }
-
-    /*
     query select to get all directors from the 'director' table
     */
     public function getDirector()

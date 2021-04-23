@@ -33,7 +33,6 @@ class Add_Movie_Controller extends CI_Controller {
 		$data['movieMessageDeletion'] = "";
 		$data['genre'] = $this->add_movie_model->getGenre(); 
 		$data['actor'] = $this->add_movie_model->getActor(); 
-		$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 		$data['director'] = $this->add_movie_model->getDirector(); 
 		$data['year'] = $this->add_movie_model->getYearReleased(); 
 		$data['movie'] = $this->add_movie_model->getMovie(); 
@@ -63,7 +62,6 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movieMessageDeletion'] = "";
 			$data['genre'] = $this->add_movie_model->getGenre(); 
 			$data['actor'] = $this->add_movie_model->getActor(); 
-			$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 			$data['director'] = $this->add_movie_model->getDirector(); 
 			$data['year'] = $this->add_movie_model->getYearReleased(); 
 			$data['movie'] = $this->add_movie_model->getMovie(); 
@@ -94,7 +92,6 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movieMessageDeletion'] = "";
 			$data['genre'] = $this->add_movie_model->getGenre(); 
 			$data['actor'] = $this->add_movie_model->getActor(); 
-			$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 			$data['director'] = $this->add_movie_model->getDirector(); 
 			$data['year'] = $this->add_movie_model->getYearReleased(); 
 			$data['movie'] = $this->add_movie_model->getMovie(); 
@@ -125,7 +122,6 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movieMessageDeletion'] = "";
 			$data['genre'] = $this->add_movie_model->getGenre(); 
 			$data['actor'] = $this->add_movie_model->getActor(); 
-			$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 			$data['director'] = $this->add_movie_model->getDirector(); 
 			$data['year'] = $this->add_movie_model->getYearReleased();  
 			$data['movie'] = $this->add_movie_model->getMovie(); 
@@ -155,7 +151,6 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movieMessageDeletion'] = "";
 			$data['genre'] = $this->add_movie_model->getGenre(); 
 			$data['actor'] = $this->add_movie_model->getActor(); 
-			$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 			$data['director'] = $this->add_movie_model->getDirector(); 
 			$data['year'] = $this->add_movie_model->getYearReleased(); 
 			$data['movie'] = $this->add_movie_model->getMovie(); 
@@ -200,7 +195,6 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movieMessageDeletion'] = "";
 			$data['genre'] = $this->add_movie_model->getGenre(); 
 			$data['actor'] = $this->add_movie_model->getActor(); 
-			$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 			$data['director'] = $this->add_movie_model->getDirector(); 
 			$data['year'] = $this->add_movie_model->getYearReleased(); 
 			$data['movie'] = $this->add_movie_model->getMovie(); 

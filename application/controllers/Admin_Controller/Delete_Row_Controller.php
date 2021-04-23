@@ -36,7 +36,6 @@ class Delete_Row_Controller extends CI_Controller {
 		$data['movieMessage'] = "";
 		$data['genre'] = $this->add_movie_model->getGenre(); 
 		$data['actor'] = $this->add_movie_model->getActor(); 
-		$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 		$data['director'] = $this->add_movie_model->getDirector(); 
 		$data['year'] = $this->add_movie_model->getYearReleased(); 
 		$data['movie'] = $this->add_movie_model->getMovie(); 
@@ -46,27 +45,21 @@ class Delete_Row_Controller extends CI_Controller {
 
     public function deleteActor()
 	{
-		$firstname = $this->input->post('genre', TRUE);
-		$lastname = $this->input->post('genre', TRUE);
-		$actorExists = $this->delete_record_model->deleteActor($firstname, $lastname); 
+		$actorName = $this->input->post('actorName', TRUE);
+		$this->delete_record_model->deleteActor($actorName); 
 
-		if($actorExists)
-		{
-			$data['actorMessageDeletion'] = "Actor '$firstname $lastname' deleted";
-		}else{
-			$data['actorMessageDeletion'] = "Actor '$firstname $lastname' does not exist";
-		}
+		$data['actorMessageDeletion'] = "Actor '$actorName' deleted";
         $data['genreMessageDeletion'] = "";
 		$data['directorMessageDeletion'] = "";
 		$data['releaseYearMessageDeletion'] = "";
 		$data['movieMessageDeletion'] = "";
 		$data['genreMessage'] = "";
 		$data['directorMessage'] = "";
+		$data['actorMessage'] = "";
 		$data['releaseYearMessage'] = "";
 		$data['movieMessage'] = "";
 		$data['genre'] = $this->add_movie_model->getGenre(); 
 		$data['actor'] = $this->add_movie_model->getActor(); 
-		$data['actorLastname'] = $this->add_movie_model->getActorLastname();
 		$data['director'] = $this->add_movie_model->getDirector(); 
 		$data['year'] = $this->add_movie_model->getYearReleased(); 
 		$data['movie'] = $this->add_movie_model->getMovie(); 
