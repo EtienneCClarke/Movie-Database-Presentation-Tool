@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:regular,bold,extrabold');
 
 #hero {
+    overflow: hidden;
     width: 100%;
     height: calc(100% - 100px);
     /* background: linear-gradient(180deg, #426DC4 0%, rgba(51, 139, 223, 0) 100%); */

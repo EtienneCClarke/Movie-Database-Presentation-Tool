@@ -39,15 +39,17 @@ class search_model extends CI_Model{
     // For some reason i kept getting errors with your search i dno 
     // why but ive made this one tenmporarily as a workaround
     public function search_($input) {
-        $query = $this->db->query(' SELECT title, genreID, year, genreID2, budget, revenue, rating, hyperlink, image, movieID,
+        $query = $this->db->query(' SELECT title, genre, movie.genreID, year, genreID2, budget, revenue, rating, hyperlink, image, movieID,
                                     director.firstname, director.lastname, actor.firstname, actor.lastname,
                                     EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) as duration
                                     FROM movie
                                     INNER JOIN released USING(releasedID)
-                                    INNER JOIN actor USING(actorID)
-                                    INNER JOIN director USING(directorID)
-                                    WHERE concat(title, " ", director.firstname, " ", director.lastname, " ", actor.firstname, " ", actor.lastname)
-                                    LIKE "%'.$input.'%";');
+                                    INNER JOIN actor ON actor.actorID = movie.actorID OR actor.actorID = movie.actorID2 OR actor.actorID = movie.actorID3
+                                    INNER JOIN director ON director.directorID = movie.directorID OR director.directorID = movie.directorID2
+                                    INNER JOIN genre ON genre.genreID = movie.genreID OR genre.genreID = movie.genreID2
+                                    WHERE concat(title, " ", director.firstname, " ", director.lastname, " ", actor.firstname, " ", actor.lastname, " ", genre)
+                                    LIKE "%'.$input.'%"
+                                    GROUP BY movieID');
         return $query->result();
     }
 }

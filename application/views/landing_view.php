@@ -165,7 +165,7 @@
             
             <div id="landing-search-container">
                 
-                <form id="search" class="landing-search">
+                <form id="search" class="landing-search" method="get" action="<?php echo site_url('browse'); ?>">
                     <input type="text" name="search" placeholder="Search..."/>
                 </form>
 
