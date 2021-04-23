@@ -12,6 +12,16 @@
         <!------- Navigation ------->
         <?php include('navigation.php'); ?>
 
+        <!------- Search ------->
+        <?php 
+            if($this->input->get('search', TRUE) !== null) {
+                echo '  <div class="searchtag noselect">
+                            <p>'.$this->input->get('search', TRUE).'</p>
+                            <p>x</p>
+                        </div>';
+            }
+        ?>
+
         <!------- Filters ------->
         <section id="filters">
 

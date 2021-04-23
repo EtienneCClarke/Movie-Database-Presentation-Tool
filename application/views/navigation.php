@@ -21,8 +21,8 @@
                     <line y1="-1.5" x2="9.10849" y2="-1.5" transform="matrix(0.575685 0.817672 -0.822915 0.568165 9.36166 11.2424)" stroke="white" stroke-width="3"/>
                 </svg>
             </span>
-            <form id="search" class="search">
-                <input type="text" name="search" placeholder="Search..."/>
+            <form id="search" class="search" method="get" action="<?php echo site_url('browse'); ?>">
+                <input type="text" name="search" placeholder="Search..." value="<?php echo $this->input->get('search', TRUE); ?>">
             </form>
         </div>
     </div>
