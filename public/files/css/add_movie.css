@@ -13,26 +13,29 @@ h1{
     text-align: center; 
 }
 
-input[type=text], input[type=submit], input[type=decimal], input[type=number], select, textarea{
+.container input[type=text], input[type=submit], input[type=decimal], input[type=number], select, textarea{
     width: 100%; 
-    padding: 14px 12px;  
+    padding: 14px 10px;  
     margin: 12px 0; 
     font-size: 20px; 
     border-radius: 10px; 
 }
 
 input[type=submit]{
-    background-color: lightgrey;
+    color: white; 
+    background-color: #1d1d1d;
+    font-family: 'Poppins', sans-serif;
 }
 
-.message{
+.message-container{
     font-size: 20pt; 
     text-align: center; 
-    color: yellow;
-    background-color: lightgray; 
+    color: green;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 20px; 
 }
 
 input[type=file]{
-    clear: both; 
     font-size: 20px; 
 }
