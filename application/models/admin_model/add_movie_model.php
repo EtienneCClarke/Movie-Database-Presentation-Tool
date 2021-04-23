@@ -111,10 +111,14 @@ class add_movie_model extends CI_Model{
         $genreID = $data['genreID'];
         $genreID2 = $data['genreID2'];
         $directorID = $data['directorID'];
+        $directorID2 = $data['directorID2'];
         $actorID = $data['actorID'];
+        $actorID2 = $data['actorID2'];
+        $actorID3 = $data['actorID3'];
         $releasedID = $data['releasedID']; 
         $description = $data['description'];
         $hyperlink = $data['hyperlink'];
+        $image = $data['image'];
 
         $query = $this->db->query("SELECT title FROM movie WHERE title='$title'"); 
         if($query->num_rows() == 1)
@@ -129,10 +133,14 @@ class add_movie_model extends CI_Model{
             $data['genreID'] = $genreID; 
             $data['genreID2'] = $genreID2; 
             $data['directorID'] = $directorID; 
+            $data['directorID2'] = $directorID; 
             $data['actorID'] = $actorID; 
+            $data['actorID2'] = $actorID;
+            $data['actorID3'] = $actorID;
             $data['releasedID'] = $releasedID; 
             $data['description'] = $description;  
             $data['hyperlink'] = $hyperlink;
+            $data['image'] = $image;
 
             $this->db->insert('movie', $data); // add movie details to database
         }

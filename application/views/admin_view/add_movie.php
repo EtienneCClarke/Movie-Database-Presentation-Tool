@@ -16,33 +16,33 @@
                         <?php echo $releaseYearMessage; ?>
                         <?php echo $movieMessage; ?>
                     </div>
-<!----------------------------------GENRE----------------------------------------->
+<!----------------------------------ADD GENRE----------------------------------------->
                     <form method='post' action="<?php echo base_url('./index.php/add_genre') ?>">
                         <h2>Genre</h2>
                         <input type='text' name='genre' placeholder='Genre name...' maxlength='255'required/>
                         <input type='submit' value='Add'>
                     </form>
-<!----------------------------------ACTOR----------------------------------------->
+<!----------------------------------ADD ACTOR----------------------------------------->
                     <h2>Actor</h2>
                     <form method='post' action="<?php echo base_url('./index.php/add_actor') ?>">
                         <input type='text' name='actorFirstname' placeholder='First name...' maxlength='255'required/><br>
                         <input type='text' name='actorLastname' placeholder='Last name...' maxlength='255'required/>
                         <input type='submit' value='Add'>
                     </form>
-<!----------------------------------DIRECTOR----------------------------------------->
+<!----------------------------------ADD DIRECTOR----------------------------------------->
                     <h2>Director</h2>
                     <form method='post' action="<?php echo base_url('./index.php/add_director') ?>">
                         <input type='text' name='directorFirstname' placeholder='First name...' maxlength='255'required/><br>
                         <input type='text' name='directorLastname' placeholder='Last name...' maxlength='255'required/>
                         <input type='submit' value='Add'>
                     </form>
-<!----------------------------------YEAR RELEASED----------------------------------------->
+<!----------------------------------ADD YEAR RELEASED----------------------------------------->
                     <h2>Year released</h2>
                     <form method='post' action="<?php echo base_url('./index.php/add_year') ?>">
                         <input type='number' name='year' placeholder='Release year' required/>
                         <input type='submit' value='Add'>
                     </form>
-<!----------------------------------Movie----------------------------------------->
+<!----------------------------------ADD MOVIE----------------------------------------->
                     <h2>Add Movie</h2>
                     <form method='post' action="<?php echo base_url('./index.php/add_movie') ?>">
                         <input type='text' name='title' placeholder='Title...' maxlength='255'required/><br>
@@ -156,9 +156,12 @@
                                 }
                                 ?>
                             </select><br>
+                            <h3>Select an image(less than 64KB):</h3> 
+                            <input type='file' name='image' accept='image/*'>
                         <input type='submit' value='Add'>
                     </form>
             </div>
+<!----------------------------------DELETE DATABASE RECORDS----------------------------------------->
                 <div class="delete-movie-container">
                     <h1>Delete Movies</h1>
                         <div class="message">

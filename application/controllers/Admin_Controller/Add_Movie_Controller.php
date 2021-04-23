@@ -143,10 +143,14 @@ class Add_Movie_Controller extends CI_Controller {
 		$data['genreID'] = $this->input->post('genreID', TRUE); 
 		$data['genreID2'] = $this->input->post('genreIDTwo', TRUE); 
 		$data['directorID'] = $this->input->post('directorID', TRUE); 
+		$data['directorID2'] = $this->input->post('directorID2', TRUE);
 		$data['actorID'] = $this->input->post('actorID', TRUE); 
+		$data['actorID2'] = $this->input->post('actorID2', TRUE);
+		$data['actorID3'] = $this->input->post('actorID1', TRUE);
 		$data['releasedID'] = $this->input->post('releaseID', TRUE); 
 		$data['description'] = $this->input->post('description', TRUE); 
-		$data['hyperlink'] = $this->input->post('hyperlink', TRUE); 
+		$data['hyperlink'] = $this->input->post('hyperlink', TRUE);
+		$data['image'] = $this->input->post('image', TRUE);  
 
 		$titleExists = $this->add_movie_model->addMovie($data);
 		if($titleExists)
