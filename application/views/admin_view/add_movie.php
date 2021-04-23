@@ -6,16 +6,23 @@
     </header>
     
     <body>
+        <div class="message-container">
+            <?php echo $genreMessage; ?>
+            <?php echo $actorMessage; ?>
+            <?php echo $directorMessage; ?>
+            <?php echo $releaseYearMessage; ?>
+            <?php echo $movieMessage; ?>
+
+            <?php echo $genreMessageDeletion; ?>
+            <?php echo $actorMessageDeletion; ?>
+            <?php echo $directorMessageDeletion; ?>
+            <?php echo $releaseYearMessageDeletion; ?>
+            <?php echo $movieMessageDeletion; ?>
+        </div>
         <div class="container">
+<!--------------------------------ADD RECORDS----------------------------------------->
             <div class="add-movie-container">
                 <h1>Add Movies</h1>
-                    <div class="message">
-                        <?php echo $genreMessage; ?>
-                        <?php echo $actorMessage; ?>
-                        <?php echo $directorMessage; ?>
-                        <?php echo $releaseYearMessage; ?>
-                        <?php echo $movieMessage; ?>
-                    </div>
 <!----------------------------------ADD GENRE----------------------------------------->
                     <form method='post' action="<?php echo base_url('./index.php/add_genre') ?>">
                         <h2>Genre</h2>
@@ -161,30 +168,40 @@
                         <input type='submit' value='Add'>
                     </form>
             </div>
-<!----------------------------------DELETE DATABASE RECORDS----------------------------------------->
+<!--------------------------------DELETE DATABASE RECORDS--------------------------------------->
                 <div class="delete-movie-container">
                     <h1>Delete Movies</h1>
-                        <div class="message">
-                            <?php echo $genreMessage; ?>
-                            <?php echo $actorMessage; ?>
-                            <?php echo $directorMessage; ?>
-                            <?php echo $releaseYearMessage; ?>
-                            <?php echo $movieMessage; ?>
-                        </div>
-                    <form>
+<!-------------------------------------DELETE GENRE--------------------------------------------->
+                    <form method='post' action="<?php echo base_url('./index.php/deleteGenre') ?>">
                         <h2>Genre</h2>
-                        <select name='genreID'>
+                        <select name='genre'>
                             <option value='Select' required>Select a genre to delete</option>
                                 <?php
                                     if(is_array($genre) || is_object($genre))
                                     {
                                         foreach($genre as $row)
                                         {
-                                            echo "<option value='$row->genreID'>$row->genre</option>";
+                                            echo "<option value='$row->genre'>$row->genre</option>";
                                         }
                                     }
                                 ?>
                             </select><br>
+                        <input type='submit' value='Delete'>
+                    </form>
+
+                    <form method='post' action="<?php echo base_url('./index.php/deleteActor') ?>">
+                        <h2>Actor</h2>
+                        <select name='actorName'>
+                            <option value='Select' required>Select actor to delete</option>
+                                <?php
+                                    if(is_array($actor) || is_object($actor))
+                                    {
+                                        foreach($actor as $row)
+                                        {
+                                            echo "<option value='$row->firstname $row->lastname'>$row->firstname $row->lastname</option>";
+                                        }
+                                    }
+                                ?>
                         <input type='submit' value='Delete'>
                     </form>
                 </div>

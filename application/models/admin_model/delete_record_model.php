@@ -6,16 +6,16 @@ class delete_record_model extends CI_Model{
         $this->load->database(); 
     }
 
-    // delete a genre record by id
-    public function deleteGenre($id)
-    {
-        $this->db->query("DELETE FROM genre WHERE genreID=$id"); 
+    // delete a genre record by genre
+    public function deleteGenre($genre)
+    { 
+        $this->db->query("DELETE FROM genre WHERE genre='$genre'");  
     }
 
-    // delete an actor record by id
-    public function deleteActor($id)
+    // delete an actor record by firstname and lastname
+    public function deleteActor($actorName)
     {
-        $this->db->query("DELETE FROM actor WHERE actorID=$id"); 
+        $this->db->query("DELETE FROM actor WHERE CONCAT(firstname,' ',lastname) = '$actorName'"); 
     }
 
     // delete a director record by id
