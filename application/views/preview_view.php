@@ -39,9 +39,16 @@
                     <h2>Revenue: <label>$4903874573434.00</label></h2>
 
                     <h2>Directors:</h2>
-                        <div class='image-profile'>
+                    <?php
+                        for($i = 0; $i < 4; $i++)
+                        {
+                    ?>
+                        <div class='image-profile' style="display:inline-block">
                             <img src="<?php echo base_url('public/images/alien.jpg') ?>">
                         </div>
+                    <?php
+                        }
+                    ?>
 
                     <h2>Actors:</h2>
                         <div class='image-profile'>
