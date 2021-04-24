@@ -2,6 +2,7 @@
     <header>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/navigation.css"/>
         <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/add_movie.css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/files/css/footer.css"/>
         <title>Add Movie</title>
     </header>
     
@@ -188,11 +189,11 @@
                             </select><br>
                         <input type='submit' value='Delete'>
                     </form>
-
+<!-------------------------------------DELETE ACTOR--------------------------------------------->
                     <form method='post' action="<?php echo base_url('./index.php/deleteActor') ?>">
                         <h2>Actor</h2>
                         <select name='actorName'>
-                            <option value='Select' required>Select actor to delete</option>
+                            <option value='Select' required>Select an actor to delete</option>
                                 <?php
                                     if(is_array($actor) || is_object($actor))
                                     {
@@ -202,6 +203,58 @@
                                         }
                                     }
                                 ?>
+                            </select><br>
+                        <input type='submit' value='Delete'>
+                    </form>
+<!-------------------------------------DELETE DIRECTOR--------------------------------------------->
+                    <form method='post' action="<?php echo base_url('./index.php/deleteDirector') ?>">
+                        <h2>Director</h2>
+                        <select name='directorName'>
+                                <option value='Select' required>Select a director to delete</option>
+                                    <?php
+                                    if(is_array($director) || is_object($director))
+                                    {
+                                        foreach($director as $row)
+                                        {
+                                            echo "<option value='$row->firstname $row->lastname'>$row->firstname $row->lastname</option>";
+                                        }
+                                    }
+                                    ?>
+                            </select><br>
+                        <input type='submit' value='Delete'>
+                    </form>
+<!-------------------------------------DELETE YEAR--------------------------------------------->
+                    <form method='post' action="<?php echo base_url('./index.php/deleteYear') ?>">
+                        <h2>Year released</h2>
+                        <select name='year'>
+                                <option value='Select' required>Select a year to delete</option>
+                                    <?php
+                                    if(is_array($year) || is_object($year))
+                                    {
+                                        foreach($year as $row)
+                                        {
+                                            echo "<option value='$row->year'>$row->year</option>";
+                                        }
+                                    }
+                                    ?>
+                            </select><br>
+                        <input type='submit' value='Delete'>
+                    </form>
+<!-------------------------------------DELETE MOVIE--------------------------------------------->
+                    <form method='post' action="<?php echo base_url('./index.php/deleteMovie') ?>">
+                        <h2>Movie</h2>
+                        <select name='movieName'>
+                                <option value='Select' required>Select a movie to delete</option>
+                                    <?php
+                                    if(is_array($movie) || is_object($movie))
+                                    {
+                                        foreach($movie as $row)
+                                        {
+                                            echo "<option value='$row->title'>$row->title</option>";
+                                        }
+                                    }
+                                    ?>
+                            </select><br>
                         <input type='submit' value='Delete'>
                     </form>
                 </div>

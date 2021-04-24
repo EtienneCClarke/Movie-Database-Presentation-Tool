@@ -38,6 +38,7 @@ class Add_Movie_Controller extends CI_Controller {
 		$data['movie'] = $this->add_movie_model->getMovie(); 
 		$this->load->view('navigation');
 		$this->load->view('admin_view/add_movie', $data);
+		$this->load->view('footer');
 	}
 
 	public function add_genre()
@@ -67,6 +68,7 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movie'] = $this->add_movie_model->getMovie(); 
 			$this->load->view('navigation');
 			$this->load->view('admin_view/add_movie', $data);
+			$this->load->view('footer');
 	}
 
 	public function add_actor()
@@ -97,6 +99,7 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movie'] = $this->add_movie_model->getMovie(); 
 			$this->load->view('navigation');
 			$this->load->view('admin_view/add_movie', $data);
+			$this->load->view('footer');
 	}
 
 	public function add_director()
@@ -127,6 +130,7 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movie'] = $this->add_movie_model->getMovie(); 
 			$this->load->view('navigation');
 			$this->load->view('admin_view/add_movie', $data);
+			$this->load->view('footer');
 	}
 
 	public function add_year()
@@ -156,6 +160,7 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movie'] = $this->add_movie_model->getMovie(); 
 			$this->load->view('navigation');
 			$this->load->view('admin_view/add_movie', $data);
+			$this->load->view('footer');
 	}
 
 	public function add_movie()
@@ -200,5 +205,6 @@ class Add_Movie_Controller extends CI_Controller {
 			$data['movie'] = $this->add_movie_model->getMovie(); 
 			$this->load->view('navigation');
 			$this->load->view('admin_view/add_movie', $data);
+			$this->load->view('footer');
 	}
 }
