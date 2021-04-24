@@ -39,7 +39,7 @@
                     <h2>Revenue: <label>$4903874573434.00</label></h2>
 
                     <h2>Directors:</h2>
-                    <img src="Movie-Database-Presentation-Tool\public\images\alien.jpg" style="width:100px">
+                    <img src="public/images/alien.jpg" style="width:100px">
                     <img src="public/images/avatar.jpg" style="width:100px">
 
                     <h2>Actors:</h2>
