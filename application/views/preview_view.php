@@ -40,20 +40,27 @@
 
                     <h2>Directors:</h2>
                     <?php
-                        for($i = 0; $i < 4; $i++)
+                        for($i = 0; $i < 2; $i++)
+                            {
+                    ?>
+                        <div class='image-profile' style="display:inline-block">
+                            <img src="<?php echo base_url('public/images/Directors/brettRatner.jpg') ?>" title="Brett Ratner">
+                        </div>
+                    <?php
+                            }
+                    ?>
+
+                    <h2>Actors:</h2>
+                    <?php
+                        for($i = 0; $i < 3; $i++)
                         {
                     ?>
                         <div class='image-profile' style="display:inline-block">
-                            <img src="<?php echo base_url('public/images/alien.jpg') ?>">
+                        <img src="<?php echo base_url('public/images/Actors/jackieChan.jpg') ?>" title="Jackie Chan">
                         </div>
                     <?php
                         }
                     ?>
-
-                    <h2>Actors:</h2>
-                        <div class='image-profile'>
-                        <img src="<?php echo base_url('public/images/alien.jpg') ?>">
-                        </div>
                 </section> 
             </div>
         </div>
