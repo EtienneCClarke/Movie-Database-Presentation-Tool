@@ -12,7 +12,7 @@
 
         <div id='movie-container'>
             <div class='movie-image-container'>
-            <img src="public/images/avatar.jpg" width="100%" height="100%">
+            <img src="<?php echo base_url('public/images/rushHour.jpg') ?>" width='100%' height='100%'>
                 <div class='duration-rating-content'>
                     <section id='duration'>
                         <h3>120min</h3> 
@@ -39,13 +39,14 @@
                     <h2>Revenue: <label>$4903874573434.00</label></h2>
 
                     <h2>Directors:</h2>
-                    <img src="public/images/alien.jpg" style="width:100px">
-                    <img src="public/images/avatar.jpg" style="width:100px">
+                        <div class='image-profile'>
+                            <img src="<?php echo base_url('public/images/alien.jpg') ?>">
+                        </div>
 
                     <h2>Actors:</h2>
-                    <img src="public/images/alien.jpg" style="width:100px">
-                    <img src="public/images/avatar.jpg" style="width:100px">
-                    <img src="public/images/avatar.jpg" style="width:100px">
+                        <div class='image-profile'>
+                        <img src="<?php echo base_url('public/images/alien.jpg') ?>">
+                        </div>
                 </section> 
             </div>
         </div>

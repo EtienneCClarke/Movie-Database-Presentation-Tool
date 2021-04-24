@@ -62,6 +62,11 @@
     margin-left: 30px; 
 }
 
+.image-profile img{
+    height: 100px; 
+    width: 100px; 
+}
+
 #story-container{
     margin-top: 50px; 
     margin-bottom: 50px; 
