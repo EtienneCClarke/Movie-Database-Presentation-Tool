@@ -19,6 +19,7 @@ class Delete_Row_Controller extends CI_Controller {
 		$this->load->model('admin_model/add_movie_model'); 
 	}
 
+	// delete genre
 	public function deleteGenre()
 	{
 		$genre = $this->input->post('genre', TRUE);
@@ -41,8 +42,10 @@ class Delete_Row_Controller extends CI_Controller {
 		$data['movie'] = $this->add_movie_model->getMovie(); 
 		$this->load->view('navigation');
 		$this->load->view('admin_view/add_movie', $data);
+		$this->load->view('footer');
 	}
 
+	// delete actor
     public function deleteActor()
 	{
 		$actorName = $this->input->post('actorName', TRUE);
@@ -65,23 +68,84 @@ class Delete_Row_Controller extends CI_Controller {
 		$data['movie'] = $this->add_movie_model->getMovie(); 
 		$this->load->view('navigation');
 		$this->load->view('admin_view/add_movie', $data);
+		$this->load->view('footer');
 	}
 
-    public function deleteDirector($id)
+	// delete director
+    public function deleteDirector()
 	{
-		$this->delete_record_model->deleteDirector($id); 
-        redirect('admin'); 
+		$directorName = $this->input->post('directorName', TRUE);
+		$this->delete_record_model->deleteDirector($directorName); 
+
+		$data['directorMessageDeletion'] = "Director '$directorName' deleted";
+		$data['actorMessageDeletion'] = "";
+        $data['genreMessageDeletion'] = "";
+		$data['releaseYearMessageDeletion'] = "";
+		$data['movieMessageDeletion'] = "";
+		$data['genreMessage'] = "";
+		$data['directorMessage'] = "";
+		$data['actorMessage'] = "";
+		$data['releaseYearMessage'] = "";
+		$data['movieMessage'] = "";
+		$data['genre'] = $this->add_movie_model->getGenre(); 
+		$data['actor'] = $this->add_movie_model->getActor(); 
+		$data['director'] = $this->add_movie_model->getDirector(); 
+		$data['year'] = $this->add_movie_model->getYearReleased(); 
+		$data['movie'] = $this->add_movie_model->getMovie(); 
+		$this->load->view('navigation');
+		$this->load->view('admin_view/add_movie', $data);
+		$this->load->view('footer');
 	}
 
-    public function deleteYear($id)
+	// delete year
+    public function deleteYear()
 	{
-		$this->delete_record_model->deleteYear($id); 
-        redirect('admin'); 
+		$year = $this->input->post('year', TRUE);
+		$this->delete_record_model->deleteYear($year); 
+
+		$data['releaseYearMessageDeletion'] = "Year '$year' deleted";
+		$data['directorMessageDeletion'] = "";
+		$data['actorMessageDeletion'] = "";
+        $data['genreMessageDeletion'] = "";
+		$data['movieMessageDeletion'] = "";
+		$data['genreMessage'] = "";
+		$data['directorMessage'] = "";
+		$data['actorMessage'] = "";
+		$data['releaseYearMessage'] = "";
+		$data['movieMessage'] = "";
+		$data['genre'] = $this->add_movie_model->getGenre(); 
+		$data['actor'] = $this->add_movie_model->getActor(); 
+		$data['director'] = $this->add_movie_model->getDirector(); 
+		$data['year'] = $this->add_movie_model->getYearReleased(); 
+		$data['movie'] = $this->add_movie_model->getMovie(); 
+		$this->load->view('navigation');
+		$this->load->view('admin_view/add_movie', $data);
+		$this->load->view('footer');
 	}
 
-    public function deleteMovie($id)
+	// delete movie
+    public function deleteMovie()
 	{
-		$this->delete_record_model->deleteMovie($id); 
-        redirect('admin'); 
+		$movieName = $this->input->post('movieName', TRUE);
+		$this->delete_record_model->deleteMovie($movieName); 
+
+		$data['movieMessageDeletion'] = "Movie '$movieName' deleted";
+		$data['releaseYearMessageDeletion'] = "";
+		$data['directorMessageDeletion'] = "";
+		$data['actorMessageDeletion'] = "";
+        $data['genreMessageDeletion'] = "";
+		$data['genreMessage'] = "";
+		$data['directorMessage'] = "";
+		$data['actorMessage'] = "";
+		$data['releaseYearMessage'] = "";
+		$data['movieMessage'] = "";
+		$data['genre'] = $this->add_movie_model->getGenre(); 
+		$data['actor'] = $this->add_movie_model->getActor(); 
+		$data['director'] = $this->add_movie_model->getDirector(); 
+		$data['year'] = $this->add_movie_model->getYearReleased(); 
+		$data['movie'] = $this->add_movie_model->getMovie(); 
+		$this->load->view('navigation');
+		$this->load->view('admin_view/add_movie', $data);
+		$this->load->view('footer'); 
 	}
 }

@@ -47,7 +47,8 @@ class add_movie_model extends CI_Model{
     */
     public function getMovie()
     {
-        $query = $this->db->query("SELECT * FROM movie ORDER BY title ASC"); 
+        $query = $this->db->query("SELECT title FROM movie 
+                                    ORDER BY title ASC"); 
         return $query->result(); 
     }
 

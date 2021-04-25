@@ -19,20 +19,21 @@ class delete_record_model extends CI_Model{
     }
 
     // delete a director record by id
-    public function deleteDirector($id)
+    public function deleteDirector($directorName)
     {
-        $this->db->query("DELETE FROM director WHERE directorID=$id"); 
+        $this->db->query("DELETE FROM director WHERE CONCAT(firstname,' ',lastname) = '$directorName'"); 
     }
 
     // delete a year record by id
-    public function deleteYear($id)
+    public function deleteYear($year)
     {
-        $this->db->query("DELETE FROM released WHERE releasedID=$id"); 
+        $this->db->query("DELETE FROM released WHERE year = $year"); 
     }
 
     // delete a movie record by id
-    public function deleteMovie($id)
+    public function deleteMovie($movieName)
     {
-        $this->db->query("DELETE FROM movie WHERE movieID=$id"); 
+        $this->db->query("DELETE FROM movie
+                          WHERE title = '$movieName'"); 
     }
 }
