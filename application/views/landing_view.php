@@ -75,7 +75,7 @@
 
                             <div class="card">
                                 <div class="card-image">
-                                <?php echo '<img src="data:image;base64,'.base64_encode($row->image).'" width="100%" height="100%"/>'?>
+                                    <img src="<?php echo $row->movieImage; ?>" width="100%" height="100%"/>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-runtime">
@@ -128,7 +128,7 @@
 
                             <div class="card">
                                 <div class="card-image">
-                                    <?php echo '<img src="data:image;base64,'.base64_encode($row->image).'" width="100%" height="100%"/>' ?>
+                                    <img src="<?php echo $row->movieImage; ?>" width="100%" height="100%"/>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-runtime">
