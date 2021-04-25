@@ -63,6 +63,7 @@
 }
 
 .image-profile img{
+    display: inline-block; 
     height: 110px; 
     width: 105px; 
 }
