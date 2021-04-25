@@ -106,31 +106,41 @@ setRightValue(releaseInputLeft, releaseInputRight, releaseThumbRight, releaseRan
 setRightValue(revenueInputLeft, revenueInputRight, revenueThumbRight, revenueRange);
 setRightValue(runtimeInputLeft, runtimeInputRight, runtimeThumbRight, runtimeRange);
 
-budgetInputLeft.addEventListener("input", function(){setLeftValue(budgetInputLeft, budgetInputRight, budgetThumbLeft, budgetRange);
-    
-});
-budgetInputRight.addEventListener("input", function(){setRightValue(budgetInputLeft, budgetInputRight, budgetThumbRight, budgetRange)});
-releaseInputLeft.addEventListener("input", function(){setLeftValue(releaseInputLeft, releaseInputRight, releaseThumbLeft, releaseRange)});
-releaseInputRight.addEventListener("input", function(){setRightValue(releaseInputLeft, releaseInputRight, releaseThumbRight, releaseRange)});
-revenueInputLeft.addEventListener("input", function(){setLeftValue(revenueInputLeft, revenueInputRight, revenueThumbLeft, revenueRange)});
-revenueInputRight.addEventListener("input", function(){setRightValue(revenueInputLeft, revenueInputRight, revenueThumbRight, revenueRange)});
-runtimeInputLeft.addEventListener("input", function(){setLeftValue(runtimeInputLeft, runtimeInputRight, runtimeThumbLeft, runtimeRange)});
-runtimeInputRight.addEventListener("input", function(){setRightValue(runtimeInputLeft, runtimeInputRight, runtimeThumbRight, runtimeRange)});
+budgetInputLeft.addEventListener("input", function(){setLeftValue(budgetInputLeft, budgetInputRight, budgetThumbLeft, budgetRange); checkOverlap(budgetThumbLeft, releaseThumbRight)});
+budgetInputRight.addEventListener("input", function(){setRightValue(budgetInputLeft, budgetInputRight, budgetThumbRight, budgetRange); checkOverlap(budgetThumbRight, budgetThumbLeft)});
+releaseInputLeft.addEventListener("input", function(){setLeftValue(releaseInputLeft, releaseInputRight, releaseThumbLeft, releaseRange); checkOverlap(releaseThumbLeft, releaseThumbRight)});
+releaseInputRight.addEventListener("input", function(){setRightValue(releaseInputLeft, releaseInputRight, releaseThumbRight, releaseRange); checkOverlap(releaseThumbRight, releaseThumbLeft)});
+revenueInputLeft.addEventListener("input", function(){setLeftValue(revenueInputLeft, revenueInputRight, revenueThumbLeft, revenueRange); checkOverlap(revenueThumbLeft, revenueThumbRight)});
+revenueInputRight.addEventListener("input", function(){setRightValue(revenueInputLeft, revenueInputRight, revenueThumbRight, revenueRange); checkOverlap(releaseThumbRight, revenueThumbLeft)});
+runtimeInputLeft.addEventListener("input", function(){setLeftValue(runtimeInputLeft, runtimeInputRight, runtimeThumbLeft, runtimeRange); checkOverlap(runtimeThumbLeft, runtimeThumbRight)});
+runtimeInputRight.addEventListener("input", function(){setRightValue(runtimeInputLeft, runtimeInputRight, runtimeThumbRight, runtimeRange); checkOverlap(releaseThumbRight, runtimeThumbLeft)});
+
+function checkOverlap($div1, $div2) {
+    if(collision($div1, $div2)) {
+        $div2.style.transform = "translateY(30px)";
+    } else {
+        $div2.style.transform = "unset"
+    }
+}
 
 function collision($div1, $div2) {
-    var x1 = $div1.offset().left;
-    var y1 = $div1.offset().top;
-    var h1 = $div1.outerHeight(true);
-    var w1 = $div1.outerWidth(true);
-    var b1 = y1 + h1;
-    var r1 = x1 + w1;
-    var x2 = $div2.offset().left;
-    var y2 = $div2.offset().top;
-    var h2 = $div2.outerHeight(true);
-    var w2 = $div2.outerWidth(true);
-    var b2 = y2 + h2;
-    var r2 = x2 + w2;
+    var x1 = $div1.left;
+    var y1 = $div1.top;
+    var h1 = $div1.height;
+    var w1 = $div1.innerWidth;
+    var x2 = y1 + h1;
+    var y2 = x1 + w1;
 
-    if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+    var x3 = $div2.left;
+    var y3 = $div2.top;
+    var h2 = $div2.height;
+    var w2 = $div2.innerWidth;
+    var x4 = y3 + h2;
+    var y4 = x3 + w2;
+
+    if (x1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
+        console.log('hit');
+        return false;
+    }
     return true;
 }
