@@ -259,5 +259,7 @@
                     </form>
                 </div>
         </div>
+
+        <script src="<?php echo base_url();?>public/files/js/interact.js"></script>
     </body>
 </html>

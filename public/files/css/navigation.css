@@ -66,7 +66,6 @@ html::-webkit-scrollbar {
     border: unset;
 }
 
-
 .search input:focus {
     outline: none;
 }
@@ -81,4 +80,105 @@ html::-webkit-scrollbar {
     color: white;
     opacity: 1;
     font-family: 'Poppins';
+}
+
+#login-toggle {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+#login-toggle svg:hover {
+    cursor: pointer;
+}
+
+#login-container {
+    position: absolute;
+    width: 736px;
+    height: 472px;
+    top: -600px;
+    left: 50%;
+    background: white;
+    transform: translate(-50%,-50%);
+    transition: 0.4s;
+    border: 10px solid #1F232B;
+    box-sizing: border-box;
+    box-shadow: 18px 20px 27px 4px rgba(0, 0, 0, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#login-container form {
+    width: 80%;
+    height: 80%;
+    margin-top: 20%;
+}
+
+#login-container form button {
+    font-size: 100%;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    transition: 0.1s;
+}
+
+#login-container form input,
+#login-container form textarea,
+.StripeElement {
+    font-family: inherit;
+    font-size: 100%;
+    color: inherit;
+    border: 1px solid lightgrey;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#login-container form input,
+#login-container form textarea,
+.StripeElement {
+    box-sizing: border-box;
+    padding: 15px;
+    margin-bottom: 1em;
+}
+
+#login-container form input:focus {
+    outline: none;
+    background: lightgrey;
+}
+
+#login-container form [type="text"],
+.StripeElement {
+    width: 100%;
+}
+
+#login-container form [type="button"],
+#login-container form [type="submit"] {
+    width: auto;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+#login-container form [type="button"]:focus,
+#login-container form [type="submit"]:focus {
+    outline: none;
+}
+
+#login-container form button:hover {
+    cursor: pointer;
+    background: grey;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    #login-container {
+        width: 90% !important;
+    }
 }

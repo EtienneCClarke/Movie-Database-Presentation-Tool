@@ -39,7 +39,7 @@ class search_model extends CI_Model{
     // For some reason i kept getting errors with your search i dno 
     // why but ive made this one tenmporarily as a workaround
     public function search_($input) {
-        $query = $this->db->query(' SELECT title, genre, movie.genreID, year, genreID2, budget, revenue, rating, hyperlink, image, movieID,
+        $query = $this->db->query(' SELECT title, genre, movie.genreID, year, genreID2, budget, revenue, rating, hyperlink, movieImage, movieID,
                                     director.firstname, director.lastname, actor.firstname, actor.lastname,
                                     EXTRACT(HOUR FROM duration)*60 + EXTRACT(MINUTE FROM duration) as duration
                                     FROM movie
