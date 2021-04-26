@@ -75,7 +75,7 @@
 
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="<?php echo base_url($row->movieImage); ?>" width="100%" height="100%"/>
+                                    <img src="<?php echo base_url($row->movieImage); ?>" title="<?php echo $row->title; ?>" width="100%" height="100%"/>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-runtime">
@@ -128,7 +128,7 @@
 
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="<?php echo base_url($row->movieImage); ?>" width="100%" height="100%"/>
+                                    <img src="<?php echo base_url($row->movieImage); ?>" title="<?php echo $row->title; ?>" width="100%" height="100%"/>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-runtime">
