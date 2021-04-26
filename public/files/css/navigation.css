@@ -113,7 +113,6 @@ html::-webkit-scrollbar {
 #login-container form {
     width: 80%;
     height: 80%;
-    margin-top: 20%;
 }
 
 #login-container form button {

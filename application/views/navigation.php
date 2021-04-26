@@ -41,6 +41,7 @@
 
     <div id="login-container">
         <form action="<?php echo site_url('Login');?>" method="post">
+            <h2>Administrator Panel</h3><br/>
             <input type="hidden" name="logout" value="<?php if($this->session->admin == true) { echo 'true';} else { echo 'false';}?>"/>
             <?php if(!isset($this->session->admin)) {
                 echo '<input type="text" name="user_name" placeholder="Username">
