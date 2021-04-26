@@ -64,7 +64,7 @@ class add_movie_model extends CI_Model{
         }
     }
 
-    public function addActor($firstname, $lastname)
+    public function addActor($firstname, $lastname, $actorImage)
     {
         $query = $this->db->query("SELECT firstname, lastname FROM actor WHERE firstname='$firstname' AND lastname='$lastname'"); 
         if($query->num_rows() == 1)
@@ -73,11 +73,12 @@ class add_movie_model extends CI_Model{
         }else{
             $data['firstname'] = $firstname;
             $data['lastname'] = $lastname; 
+            $data['actorImage'] = $actorImage;
             $this->db->insert('actor', $data);  
         }
     }
 
-    public function addDirector($firstname, $lastname)
+    public function addDirector($firstname, $lastname, $directorImage)
     {
         $query = $this->db->query("SELECT firstname, lastname FROM director WHERE firstname='$firstname' AND lastname='$lastname'"); 
         if($query->num_rows() == 1)
@@ -86,6 +87,7 @@ class add_movie_model extends CI_Model{
         }else{
             $data['firstname'] = $firstname;
             $data['lastname'] = $lastname; 
+            $data['directorImage'] = $directorImage;
             $this->db->insert('director', $data);  
         }
     }
@@ -119,7 +121,7 @@ class add_movie_model extends CI_Model{
         $releasedID = $data['releasedID']; 
         $description = $data['description'];
         $hyperlink = $data['hyperlink'];
-        $image = $data['image'];
+        $movieImage = $data['movieImage'];
 
         $query = $this->db->query("SELECT title FROM movie WHERE title='$title'"); 
         if($query->num_rows() == 1)
@@ -141,7 +143,7 @@ class add_movie_model extends CI_Model{
             $data['releasedID'] = $releasedID; 
             $data['description'] = $description;  
             $data['hyperlink'] = $hyperlink;
-            $data['image'] = $image;
+            $data['movieImage'] = $movieImage;
 
             $this->db->insert('movie', $data); // add movie details to database
         }

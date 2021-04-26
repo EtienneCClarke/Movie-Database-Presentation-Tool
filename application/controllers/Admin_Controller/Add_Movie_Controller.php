@@ -75,8 +75,9 @@ class Add_Movie_Controller extends CI_Controller {
 	{
 		$firstname = $this->input->post('actorFirstname', TRUE); 
 		$lastname = $this->input->post('actorLastname', TRUE); 
+		$actorImage = "public/images/Actors/".$this->input->post('actorImage', TRUE);
 
-		$actorExists = $this->add_movie_model->addActor($firstname, $lastname);
+		$actorExists = $this->add_movie_model->addActor($firstname, $lastname, $actorImage);
 		if($actorExists)
 		{
 			$data['actorMessage'] = "Actor already exists";
@@ -106,8 +107,9 @@ class Add_Movie_Controller extends CI_Controller {
 	{
 		$firstname = $this->input->post('directorFirstname', TRUE); 
 		$lastname = $this->input->post('directorLastname', TRUE); 
+		$directorImage = "public/images/Directors/".$this->input->post('directorImage', TRUE);
 
-		$directorExists = $this->add_movie_model->addDirector($firstname, $lastname);
+		$directorExists = $this->add_movie_model->addDirector($firstname, $lastname, $directorImage);
 		if($directorExists)
 		{
 			$data['directorMessage'] = "Director already exists";
@@ -180,7 +182,7 @@ class Add_Movie_Controller extends CI_Controller {
 		$data['releasedID'] = $this->input->post('releaseID', TRUE); 
 		$data['description'] = $this->input->post('description', TRUE); 
 		$data['hyperlink'] = $this->input->post('hyperlink', TRUE);
-		$data['image'] = $this->input->post('image', TRUE);  
+		$data['movieImage'] = "public/images/Movie posters/".$this->input->post('movieImage', TRUE);  
 
 		$titleExists = $this->add_movie_model->addMovie($data);
 		if($titleExists)
