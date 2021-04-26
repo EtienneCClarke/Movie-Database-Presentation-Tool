@@ -18,7 +18,7 @@
             ?>
         <div id='movie-container'>
             <div class='movie-image-container'>
-            <img src="<?php echo base_url($row->movieImage); ?>" width='100%' height='100%'>
+            <img src="<?php echo base_url($row->movieImage); ?>" title="<?php echo $row->title; ?>" width='100%' height='100%'>
                 
                 <div class='duration-rating-content'>
                     <section id='duration'>
